@@ -159,10 +159,12 @@ const EventsCard = () => {
                 </div>
               </div>
 
-              <button className="ecards-register-btn">
-                <span className="ecards-btn-text">Register Now</span>
-                <span className="ecards-btn-icon">→</span>
-              </button>
+              <Link to="/register" className="ecards-reg">
+                <button className="ecards-register-btn">
+                  <span className="ecards-btn-text">Register Now</span>
+                  <span className="ecards-btn-icon">→</span>
+                </button>
+              </Link>
             </div>
           </div>
         ))}

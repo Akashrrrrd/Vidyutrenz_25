@@ -155,6 +155,9 @@
   grid-column: 2;
 }
 
+.ecards-reg {
+  text-decoration: none;
+}
 .ecards-register-btn {
   width: 100%;
   padding: 15px;

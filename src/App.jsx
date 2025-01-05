@@ -9,6 +9,7 @@ import About from "./components/About/About";
 import Events from "./components/Events/Events";
 import EventsCard from "./pages/EventsCard/EventsCard";
 import Contact from "./components/Contact/Contact";
+import Register from "./pages/Register/Register";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -42,6 +43,7 @@ const App = () => {
                 <Route path="/events" element={<Events />} />
                 <Route path="/events/:eventType" element={<EventsCard />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/register" element={<Register />} />
               </Routes>
             </main>
           </>
