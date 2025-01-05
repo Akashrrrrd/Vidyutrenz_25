@@ -206,7 +206,7 @@
 /* Mobile Responsiveness */
 @media (max-width: 640px) {
   .register-container {
-    padding: 1rem;
+    padding: 0.5rem;
     padding-top: 4.5rem; /* Adjust this value based on the navbar height */
   }
 

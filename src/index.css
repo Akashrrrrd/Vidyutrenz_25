@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -13,20 +12,52 @@ body {
   width: 100%;
 }
 
-/* Loading overlay */
 .loading-overlay {
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, #1a237e, #0d47a1);
+  background: linear-gradient(135deg, #1a237e, #0d47a1, #283593, #1565c0);
+  background-size: 400% 400%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
   opacity: 0;
-  animation: fadeIn 0.5s ease-out forwards;
+  animation: fadeIn 0.5s ease-out forwards, gradientShift 5s infinite;
 }
 
-/* Logo container */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .logo-container {
   position: relative;
   width: 200px;
@@ -36,7 +67,6 @@ body {
   align-items: center;
 }
 
-/* Logo styling */
 .loading-logo {
   width: 100%;
   height: 100%;
@@ -44,7 +74,6 @@ body {
   animation: logoZoom 2s ease-in-out infinite;
 }
 
-/* Main content */
 .app {
   position: relative;
   min-height: 100vh;
@@ -55,7 +84,6 @@ body {
   animation: fadeIn 0.5s ease-out 0.3s forwards;
 }
 
-/* Animations */
 @keyframes logoZoom {
   0%,
   100% {
@@ -66,25 +94,6 @@ body {
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Smooth transitions */
-button,
-a,
-input,
-select,
-textarea {
-  transition: all 0.2s ease-in-out;
-}
-
-/* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
@@ -93,4 +102,12 @@ textarea {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  transition: all 0.2s ease-in-out;
 }

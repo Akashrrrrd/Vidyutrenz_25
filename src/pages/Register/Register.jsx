@@ -182,9 +182,9 @@ const Register = () => {
             Register Now
           </button>
 
-          <p className="login-link">
+          {/* <p className="login-link">
             Already registered? <a href="/login">Login here</a>
-          </p>
+          </p> */}
         </form>
       </div>
       <ToastContainer
