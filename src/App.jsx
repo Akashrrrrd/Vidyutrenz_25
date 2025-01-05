@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import Events from './components/Events/Events';
 // import Events from './components/Events/Events';
 // import Contact from './components/Contact/Contact';
 // import Register from './components/Register/Register';
@@ -21,7 +22,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-           
+            <Route path="/events" element={<Events/>}/>
           </Routes>
         </main>
       </div>

@@ -1,0 +1,109 @@
+
+
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  color: white;
+  text-align: center;
+}
+
+.event-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1); /* Fallback for missing background images */
+  backdrop-filter: blur(10px); /* Adds a modern glass effect */
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.event-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* Adds a darker overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.event-card:hover .event-overlay {
+  opacity: 1;
+}
+
+.event-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #ffd700; /* Gold color for titles */
+  font-weight: bold;
+}
+
+.event-overlay p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .event-card {
+    width: 90%; /* Take up most of the screen width */
+    height: auto; /* Adjust height automatically for content */
+  }
+
+  .event-overlay h3 {
+    font-size: 1.2rem; /* Reduce font size for smaller screens */
+  }
+
+  .event-overlay p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-container {
+    padding: 10px;
+  }
+
+  .event-card {
+    width: 100%; /* Full width for very small screens */
+  }
+
+  .event-overlay h3 {
+    font-size: 1rem;
+  }
+
+  .event-overlay p {
+    font-size: 0.8rem;
+  }
+}
