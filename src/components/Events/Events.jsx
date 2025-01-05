@@ -1,46 +1,45 @@
 import React from "react";
 import "./Events.css";
-import Tech from './../../assets/tech_logo.png';
-import NonTech from './../../assets/nontech_logo.png';
-import Workshop from './../../assets/workshop_logo.png';
-import BackgroundImage from '../../assets/back_home.png'; // Corrected import name
+import Tech from "./../../assets/tech_logo.png";
+import NonTech from "./../../assets/nontech_logo.png";
+import Workshop from "./../../assets/workshop_logo.png";
+import BackgroundImage from "./../../assets/back_home.png";
 
 const Events = () => {
-  const events = [
-    {
-      title: "Technical",
-      description: "Register for our Technical Events and Win Exciting Prizes",
-      image: Tech,
-    },
-    {
-      title: "Non-Technical",
-      description: "Register for our Non-Technical Events and Win Exciting Prizes",
-      image: NonTech,
-    },
-    {
-      title: "Workshop",
-      description: "Register for our Workshop Events and Win Exciting Prizes",
-      image: Workshop,
-    },
-  ];
-
   return (
     <div
       className="events-container"
       style={{ backgroundImage: `url(${BackgroundImage})` }}
     >
-      {events.map((event, index) => (
-        <div
-          className="event-card"
-          key={index}
-          style={{ backgroundImage: `url(${event.image})` }}
-        >
-          <div className="event-overlay">
-            <h3>{event.title}</h3>
-            <p>{event.description}</p>
-          </div>
+      {/* Technical Event */}
+      <div className="event-card" style={{ backgroundImage: `url(${Tech})` }}>
+        <div className="event-overlay">
+          <h3>Technical</h3>
+          <p>Register for our Technical Events and Win Exciting Prizes</p>
         </div>
-      ))}
+      </div>
+
+      {/* Non-Technical Event */}
+      <div
+        className="event-card"
+        style={{ backgroundImage: `url(${NonTech})` }}
+      >
+        <div className="event-overlay">
+          <h3>Non-Technical</h3>
+          <p>Register for our Non-Technical Events and Win Exciting Prizes</p>
+        </div>
+      </div>
+
+      {/* Workshop Event */}
+      <div
+        className="event-card"
+        style={{ backgroundImage: `url(${Workshop})` }}
+      >
+        <div className="event-overlay">
+          <h3>Workshop</h3>
+          <p>Register for our Workshop Events and Win Exciting Prizes</p>
+        </div>
+      </div>
     </div>
   );
 };

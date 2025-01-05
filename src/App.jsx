@@ -6,8 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Events from './components/Events/Events';
-// import Events from './components/Events/Events';
-// import Contact from './components/Contact/Contact';
+import Contact from './components/Contact/Contact';
 // import Register from './components/Register/Register';
 // import NotFound from './components/NotFound/NotFound';
 
@@ -23,6 +22,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/events" element={<Events/>}/>
+            <Route path="/contact" element={<Contact/>}/>
           </Routes>
         </main>
       </div>

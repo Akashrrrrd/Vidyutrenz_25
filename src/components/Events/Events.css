@@ -1,5 +1,4 @@
-
-
+/* Container for all events */
 .events-container {
   display: flex;
   flex-wrap: wrap;
@@ -7,15 +6,17 @@
   align-items: center;
   gap: 20px;
   padding: 40px 20px;
+  padding-top: 120px; /* 80px navbar + 40px spacing */
   min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  background-attachment: fixed;
   color: white;
   text-align: center;
 }
 
+/* Individual event card */
 .event-card {
   position: relative;
   width: 300px;
@@ -27,8 +28,8 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.1); /* Fallback for missing background images */
-  backdrop-filter: blur(10px); /* Adds a modern glass effect */
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .event-card:hover {
@@ -36,10 +37,11 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
+/* Overlay for text on event card */
 .event-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7); /* Adds a darker overlay */
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,11 +56,12 @@
   opacity: 1;
 }
 
+/* Event overlay text styling */
 .event-overlay h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #ffd700; /* Gold color for titles */
+  color: #ffd700;
   font-weight: bold;
 }
 
@@ -69,34 +72,35 @@
   margin: 0;
 }
 
-@media (max-width: 768px) {
+/* Mobile View */
+@media screen and (max-width: 768px) {
   .events-container {
-    flex-direction: column;
-    padding: 20px;
+    padding-top: 100px; /* Adjust for smaller screen navbar spacing */
+    padding: 20px 10px;
+    gap: 15px;
   }
 
   .event-card {
-    width: 90%; /* Take up most of the screen width */
-    height: auto; /* Adjust height automatically for content */
+    width: 90%;
+    height: 300px;
   }
 
   .event-overlay h3 {
-    font-size: 1.2rem; /* Reduce font size for smaller screens */
+    font-size: 1.2rem;
   }
 
   .event-overlay p {
     font-size: 0.9rem;
-    line-height: 1.4;
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .events-container {
-    padding: 10px;
+    padding-top: 90px; /* Slightly tighter spacing for ultra-small screens */
   }
 
   .event-card {
-    width: 100%; /* Full width for very small screens */
+    height: 250px;
   }
 
   .event-overlay h3 {

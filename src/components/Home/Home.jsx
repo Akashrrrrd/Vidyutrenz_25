@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Home.css';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./Home.css";
 // Import your background image
-import BackgroundImage from '../../assets/back_home.png'; 
+import BackgroundImage from "../../assets/back_home.png";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,18 +12,18 @@ const Home = () => {
   }, []);
 
   return (
-    <div 
+    <div
       className="home-container"
       style={{ backgroundImage: `url(${BackgroundImage})` }}
     >
       <div className="hero-overlay"></div>
-      <div className={`hero-content ${isVisible ? 'visible' : ''}`}>
+      <div className={`hero-content ${isVisible ? "visible" : ""}`}>
         <div className="glitch-container">
           <h1 className="main-title" data-text="Vidyutrenz 2025">
             Vidyutrenz 2025
           </h1>
         </div>
-        
+
         <div className="subtitle-container">
           <h2 className="subtitle">
             Blending the Boundaries of Utopia and Dystopia
@@ -32,8 +32,8 @@ const Home = () => {
 
         <div className="description-container">
           <p className="description">
-            Experience the convergence of technology and imagination at Tamil Nadu's
-            premier technical symposium.
+            Experience the convergence of technology and imagination at Tamil
+            Nadu's premier technical symposium.
           </p>
         </div>
 
@@ -49,7 +49,9 @@ const Home = () => {
           </div>
           <div className="detail-item">
             <span className="detail-label">Venue</span>
-            <span className="detail-value">Chennai Institute of Technology, Kundrathur</span>
+            <span className="detail-value">
+              Chennai Institute of Technology, Kundrathur
+            </span>
           </div>
         </div>
       </div>
