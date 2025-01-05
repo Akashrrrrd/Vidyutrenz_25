@@ -52,8 +52,9 @@
   text-transform: uppercase;
   letter-spacing: max(2px, 0.05em);
   margin-bottom: clamp(1rem, 3vh, 2rem);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 255, 0.3),
-    0 0 40px rgba(0, 255, 255, 0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(128, 0, 255, 0.5),
+    0 0 40px rgba(191, 64, 255, 0.3);
+
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
   background: linear-gradient(to right, #fff 0%, #f0f0f0 50%, #fff 100%);
@@ -88,7 +89,7 @@
   letter-spacing: 0.3px;
 }
 
-.register-button {
+.register-button-home {
   width: min(85%, 320px);
   padding: 1.3rem 2.5rem;
   font-size: clamp(1.1rem, 2.5vw, 1.3rem);
@@ -112,7 +113,7 @@
   animation: gradientFlow 8s ease infinite;
 }
 
-.register-button::before {
+.register-button-home::before {
   content: "";
   position: absolute;
   top: 0;
@@ -129,7 +130,7 @@
   transition: transform 0.75s ease;
 }
 
-.register-button:active {
+.register-button-home:active {
   transform: translateY(2px) scale(0.98);
 }
 
@@ -243,17 +244,17 @@
     background-attachment: fixed;
   }
 
-  .register-button {
+  .register-button-home {
     width: auto;
     padding: 1.4rem 3.5rem;
   }
 
-  .register-button:hover {
+  .register-button-home:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 0 50px rgba(0, 255, 255, 0.4);
   }
 
-  .register-button:hover::before {
+  .register-button-home:hover::before {
     transform: translateX(100%) skewX(-25deg);
   }
 
@@ -333,7 +334,7 @@
     display: none;
   }
 
-  .register-button {
+  .register-button-home {
     display: none;
   }
 }

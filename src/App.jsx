@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Events from "./components/Events/Events";
+import EventsCard from "./pages/EventsCard/EventsCard";
 import Contact from "./components/Contact/Contact";
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/events" element={<Events />} />
+                <Route path="/events/:eventType" element={<EventsCard />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </main>

@@ -4,9 +4,9 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   padding: 40px 20px;
-  padding-top: 120px; /* 80px navbar + 40px spacing */
+  padding-top: 120px;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
@@ -14,6 +14,7 @@
   background-attachment: fixed;
   color: white;
   text-align: center;
+  background-color: #1a1a1a; /* Fallback dark background */
 }
 
 /* Individual event card */
@@ -23,91 +24,149 @@
   height: 400px;
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
+  border-radius: 25px;
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .event-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Overlay for text on event card */
 .event-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.8)
+  );
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end; /* Changed to align content to bottom */
   align-items: center;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(20px);
 }
 
 .event-card:hover .event-overlay {
   opacity: 1;
+  transform: translateY(0);
 }
 
 /* Event overlay text styling */
 .event-overlay h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
   text-transform: uppercase;
   color: #ffd700;
   font-weight: bold;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .event-overlay p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #f0f0f0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffffff;
   margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  opacity: 0.9;
+}
+
+.event-card:hover .event-overlay h3,
+.event-card:hover .event-overlay p {
+  transform: translateY(0);
+}
+
+/* Add a subtle shine effect */
+.event-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.8s;
+  opacity: 0;
+}
+
+.event-card:hover::after {
+  opacity: 1;
 }
 
 /* Mobile View */
 @media screen and (max-width: 768px) {
   .events-container {
-    padding-top: 100px; /* Adjust for smaller screen navbar spacing */
+    padding-top: 100px;
     padding: 20px 10px;
-    gap: 15px;
+    gap: 20px;
   }
 
   .event-card {
-    width: 90%;
+    width: calc(90% - 20px);
+    max-width: 400px;
     height: 300px;
+    border-radius: 20px;
+  }
+
+  .event-overlay {
+    padding: 25px;
   }
 
   .event-overlay h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
   }
 
   .event-overlay p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .events-container {
-    padding-top: 90px; /* Slightly tighter spacing for ultra-small screens */
+    padding-top: 90px;
+    gap: 15px;
   }
 
   .event-card {
     height: 250px;
+    border-radius: 15px;
+  }
+
+  .event-overlay {
+    padding: 20px;
   }
 
   .event-overlay h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
   }
 
   .event-overlay p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
