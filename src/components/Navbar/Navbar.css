@@ -41,7 +41,7 @@
 }
 
 .navbar-logo img {
-  height: 40px;
+  height: 60px;
   width: auto;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
@@ -107,13 +107,21 @@
   background: linear-gradient(135deg, #00f2fe 0%, #4facfe 150%);
 }
 
+/* Mobile Menu Enhancements */
 .mobile-menu-button {
   display: none;
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.6rem;
   color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
 }
 
 .menu-icon {

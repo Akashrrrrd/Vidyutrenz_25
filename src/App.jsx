@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BackgroundImage from "./assets/navbar_logo.png";
 
 // Component Imports
 import Navbar from "./components/Navbar/Navbar";
@@ -11,10 +12,9 @@ import Contact from "./components/Contact/Contact";
 const App = () => {
   const [loading, setLoading] = useState(true);
 
-  // Simulate loading process for demo (you can adjust this in real-world apps)
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false); // Hide loading after 2 seconds
+      setLoading(false);
     }, 2000);
   }, []);
 
@@ -23,7 +23,13 @@ const App = () => {
       <div className="app">
         {loading ? (
           <div className="loading-overlay">
-            <div className="spinner"></div>
+            <div className="logo-container">
+              <img
+                src={BackgroundImage}
+                alt="Symposium Logo"
+                className="loading-logo"
+              />
+            </div>
           </div>
         ) : (
           <>
