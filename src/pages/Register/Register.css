@@ -7,6 +7,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
     url("./../../assets/back_home.png") no-repeat center center;
   background-size: cover;
+  position: relative;
 }
 
 .register-content {
@@ -118,23 +119,6 @@
   border-color: #2563eb;
 }
 
-.password-toggle {
-  position: absolute;
-  right: 1rem;
-  background: none;
-  border: none;
-  color: #2563eb;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.password-toggle:hover {
-  color: #1d4ed8;
-}
-
 .submit-button {
   background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white;
@@ -185,29 +169,132 @@
   transform: translateY(0);
 }
 
-.login-link {
-  text-align: center;
-  margin-top: 1.5rem;
-  color: #666;
+/* Notification Styles */
+.notifications-container {
+  position: fixed;
+  top: calc(4rem + 1rem); /* 4rem for navbar height + 1rem padding */
+  right: 1rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.login-link a {
-  color: #2563eb;
-  text-decoration: none;
+.notification {
+  min-width: 320px;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.notification.success {
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.95),
+    rgba(29, 78, 216, 0.95)
+  );
+  color: white;
+}
+
+.notification.error {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.95),
+    rgba(220, 38, 38, 0.95)
+  );
+  color: white;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.notification-message {
+  flex-grow: 1;
+  font-size: 0.95rem;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
-.login-link a:hover {
-  color: #1d4ed8;
-  text-decoration: underline;
+.notification-close {
+  background: transparent;
+  border: none;
+  color: currentColor;
+  opacity: 0.8;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+}
+
+.notification-close:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.notification-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  animation: progress 5s linear;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* Loading Animation */
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  animation: rotating 1s linear infinite;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 640px) {
+  .notifications-container {
+    top: calc(3.5rem + 0.5rem); /* Slightly reduced spacing for mobile */
+  }
   .register-container {
     padding: 0.5rem;
-    padding-top: 4.5rem; /* Adjust this value based on the navbar height */
+    padding-top: 4.5rem;
   }
 
   .register-content {
@@ -237,6 +324,12 @@
     width: 18px;
     height: 18px;
   }
+
+  .notification {
+    min-width: auto;
+    width: calc(100vw - 2rem);
+    margin: 0 0.5rem;
+  }
 }
 
 /* Tablet Responsiveness */
@@ -248,18 +341,4 @@
   .register-content {
     max-width: 500px;
   }
-}
-
-/* Loading Animation */
-@keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loading {
-  animation: rotating 1s linear infinite;
 }

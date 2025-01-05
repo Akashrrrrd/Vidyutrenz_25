@@ -1,8 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Mail, User, Phone, School, BookOpen, Users, X } from "lucide-react";
 import "./Register.css";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { Mail, User, Phone, School, BookOpen, Users } from "lucide-react";
+
+const Notification = ({ message, type, onClose }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onClose();
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [onClose]);
+
+  return (
+    <div className={`notification ${type}`}>
+      <div className="notification-content">
+        <span className="notification-message">{message}</span>
+        <button className="notification-close" onClick={onClose}>
+          <X size={18} />
+        </button>
+      </div>
+      <div className="notification-progress" />
+    </div>
+  );
+};
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +35,8 @@ const Register = () => {
     event: "",
   });
 
-  // Sample event options - customize as needed
+  const [notifications, setNotifications] = useState([]);
+
   const eventOptions = [
     { id: 1, name: "Code Combat", fee: "₹500" },
     { id: 2, name: "Hack Fusion", fee: "₹300" },
@@ -25,21 +46,31 @@ const Register = () => {
     { id: 6, name: "Web Development", fee: "₹400" },
   ];
 
+  const showNotification = (message, type) => {
+    const id = Date.now();
+    setNotifications((prev) => [...prev, { id, message, type }]);
+  };
+
+  const removeNotification = (id) => {
+    setNotifications((prev) =>
+      prev.filter((notification) => notification.id !== id)
+    );
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (!formData.event) {
-      toast.error("Please select an event!");
+      showNotification("Please select an event!", "error");
       return;
     }
 
-    // Here you would typically make an API call to register
-    // For now, we'll simulate success
-    toast.success("Registration successful! Welcome to " + formData.event);
+    showNotification(
+      `Registration successful! Welcome to ${formData.event}`,
+      "success"
+    );
     console.log("Form submitted:", formData);
 
-    // Optional: Clear form after successful submission
     setFormData({
       name: "",
       email: "",
@@ -61,6 +92,17 @@ const Register = () => {
 
   return (
     <div className="register-container">
+      <div className="notifications-container">
+        {notifications.map(({ id, message, type }) => (
+          <Notification
+            key={id}
+            message={message}
+            type={type}
+            onClose={() => removeNotification(id)}
+          />
+        ))}
+      </div>
+
       <div className="register-content">
         <div className="register-header">
           <h1>Register for Symposium</h1>
@@ -181,24 +223,8 @@ const Register = () => {
           <button type="submit" className="submit-button">
             Register Now
           </button>
-
-          {/* <p className="login-link">
-            Already registered? <a href="/login">Login here</a>
-          </p> */}
         </form>
       </div>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
     </div>
   );
 };
