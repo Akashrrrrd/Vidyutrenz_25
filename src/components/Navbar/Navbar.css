@@ -119,7 +119,7 @@
 .menu-icon {
   width: 24px;
   height: 24px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .nav-links-mobile {
@@ -200,7 +200,7 @@
 /* Scrolled state text color adjustment */
 .navbar-scrolled .nav-link,
 .navbar-scrolled .mobile-menu-button {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: none;
 }
 

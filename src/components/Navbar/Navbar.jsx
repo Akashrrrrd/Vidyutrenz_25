@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import './Navbar.css';
-import navbar_logo from './../../assets/navbar_logo.png';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import "./Navbar.css";
+import navbar_logo from "./../../assets/navbar_logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,12 +13,12 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
       <div className="navbar-container">
         <div className="navbar-content">
           {/* Logo */}
@@ -28,10 +28,18 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="nav-links-desktop">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/about" className="nav-link">About</Link>
-            <Link to="/events" className="nav-link">Events</Link>
-            <Link to="/contact" className="nav-button">Contact Us</Link>
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+            <Link to="/about" className="nav-link">
+              About
+            </Link>
+            <Link to="/events" className="nav-link">
+              Events
+            </Link>
+            <Link to="/contact" className="nav-button">
+              Contact Us
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -50,16 +58,32 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="nav-links-mobile">
-            <Link to="/" className="nav-link-mobile" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link
+              to="/"
+              className="nav-link-mobile"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               Home
             </Link>
-            <Link to="/about" className="nav-link-mobile" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link
+              to="/about"
+              className="nav-link-mobile"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               About
             </Link>
-            <Link to="/events" className="nav-link-mobile" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link
+              to="/events"
+              className="nav-link-mobile"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               Events
             </Link>
-            <Link to="/contact" className="nav-link-mobile" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link
+              to="/contact"
+              className="nav-link-mobile"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               Contact Us
             </Link>
           </div>

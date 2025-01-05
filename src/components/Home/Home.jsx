@@ -32,8 +32,9 @@ const Home = () => {
 
         <div className="description-container">
           <p className="description">
-            Experience the convergence of technology and imagination at Tamil
-            Nadu's premier technical symposium.
+            Immerse yourself in a world where innovation meets creativity at the
+            ultimate technical symposium, where ideas and technologies come to
+            life.
           </p>
         </div>
 

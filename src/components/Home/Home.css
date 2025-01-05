@@ -3,7 +3,7 @@
 .home-container {
   min-height: 100vh;
   width: 100%;
-  padding-top: max(80px, env(safe-area-inset-top));
+  padding-top: max(120px, env(safe-area-inset-top));
   position: relative;
   background-size: cover;
   background-position: center;
