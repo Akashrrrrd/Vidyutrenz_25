@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./EventsCard.css";
-import BackgroundImage from "./../../assets/back_home.png";
+import BackgroundImage from "./../../assets/backup.png";
 
 const EventsCard = () => {
   const { eventType } = useParams();

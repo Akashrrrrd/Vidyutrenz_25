@@ -4,7 +4,7 @@ import "./Events.css";
 import Tech from "./../../assets/tech_logo.png";
 import NonTech from "./../../assets/nontech_logo.png";
 import Workshop from "./../../assets/workshop_logo.png";
-import BackgroundImage from "./../../assets/back_home.png";
+import BackgroundImage from "./../../assets/backup.png";
 
 const Events = () => {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./About.css";
-import BackgroundImage from "../../assets/back_home.png";
+import BackgroundImage from "../../assets/backup.png";
 import AboutImage1 from "../../assets/about_img_1.png";
 import AboutImage2 from "../../assets/about_img_2.png";
 import AboutImage3 from "../../assets/about_img_3.png";

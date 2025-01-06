@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 // Import your background image
-import BackgroundImage from "../../assets/back_home.png";
+import BackgroundImage from "../../assets/backup.png";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);

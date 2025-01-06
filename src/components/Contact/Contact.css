@@ -2,7 +2,7 @@
 .contact-page {
   min-height: 100vh;
   padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 1.25rem);
-  background: url(./../../assets/back_home.png) no-repeat center center;
+  background: url(./../../assets/backup.png) no-repeat center center;
   background-size: cover;
   position: relative;
 }
