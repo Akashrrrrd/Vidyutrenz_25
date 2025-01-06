@@ -16,32 +16,54 @@ import EventsCard from "./pages/EventsCard/EventsCard";
 import Contact from "./components/Contact/Contact";
 import Register from "./pages/Register/Register";
 
+// Enhanced Loading Component
+const LoadingScreen = () => {
+  return (
+    <div className="loading-overlay">
+      <div className="logo-container">
+        <div className="logo-glow"></div>
+        <img
+          src={BackgroundImage}
+          alt="Symposium Logo"
+          className="loading-logo"
+        />
+        <div className="loading-text">SYMPOSIUM 2K25</div>
+      </div>
+    </div>
+  );
+};
+
 // ScrollToTop component
 const ScrollToTop = () => {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, [location]);
 
   return null;
 };
 
 const AppContent = ({ loading }) => {
+  const [contentVisible, setContentVisible] = useState(!loading);
+
+  useEffect(() => {
+    if (!loading) {
+      const timer = setTimeout(() => setContentVisible(true), 100);
+      return () => clearTimeout(timer);
+    }
+    setContentVisible(false);
+  }, [loading]);
+
   return (
     <>
       {loading ? (
-        <div className="loading-overlay">
-          <div className="logo-container">
-            <img
-              src={BackgroundImage}
-              alt="Symposium Logo"
-              className="loading-logo"
-            />
-          </div>
-        </div>
+        <LoadingScreen />
       ) : (
-        <>
+        <div className={`app-wrapper ${contentVisible ? "visible" : ""}`}>
           <ScrollToTop />
           <Navbar />
           <main className="main-content">
@@ -54,7 +76,7 @@ const AppContent = ({ loading }) => {
               <Route path="/register" element={<Register />} />
             </Routes>
           </main>
-        </>
+        </div>
       )}
     </>
   );
@@ -64,9 +86,11 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    const loadingTimeout = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 2500);
+
+    return () => clearTimeout(loadingTimeout);
   }, []);
 
   return (
