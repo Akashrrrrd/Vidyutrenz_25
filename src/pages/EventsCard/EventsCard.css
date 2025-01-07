@@ -1,6 +1,6 @@
 .ecards-main-container {
   min-height: 100vh;
-  padding: 120px 40px 40px;
+  padding: 80px 40px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -205,11 +205,11 @@
 
 @media screen and (max-width: 768px) {
   .ecards-main-container {
-    padding: 100px 20px 30px;
+    padding: 80px 20px 30px;
   }
 
   .ecards-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .ecards-grid {
@@ -228,7 +228,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
   }
 
   .ecards-info-grid {
@@ -238,24 +238,24 @@
 
 @media screen and (max-width: 480px) {
   .ecards-main-container {
-    padding: 90px 15px 20px;
+    padding: 70px 15px 20px;
   }
 
   .ecards-title {
-    font-size: 1.8rem;
-  }
-
-  .ecards-event-title {
     font-size: 1.5rem;
   }
 
+  .ecards-event-title {
+    font-size: 1.3rem;
+  }
+
   .ecards-content-wrapper {
-    padding: 20px;
+    padding: 15px;
   }
 
   .ecards-header-section {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     text-align: center;
   }
 }

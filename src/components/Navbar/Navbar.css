@@ -23,7 +23,6 @@
 
 .navbar-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 80px;
   position: relative;
@@ -32,7 +31,8 @@
 .navbar-logo {
   display: block;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
+  position: absolute;
+  left: 10px;
 }
 
 .navbar-logo:hover {
@@ -50,7 +50,9 @@
   display: flex;
   gap: 2.5rem;
   align-items: center;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-link {
@@ -117,6 +119,8 @@
   padding: 0.6rem;
   color: rgba(255, 255, 255, 0.9);
   transition: all 0.3s ease;
+  position: absolute;
+  right: 0;
 }
 
 .mobile-menu-button:hover {
@@ -144,6 +148,10 @@
     height: 70px;
   }
 
+  .navbar-logo {
+    left: 1rem; /* Adjust logo position for mobile */
+  }
+
   .nav-links-desktop {
     display: none;
   }
@@ -158,6 +166,10 @@
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
@@ -170,6 +182,7 @@
     transition: all 0.3s ease;
     border-radius: 0.5rem;
     letter-spacing: 0.5px;
+    text-align: center;
   }
 
   .nav-link-mobile:hover {
