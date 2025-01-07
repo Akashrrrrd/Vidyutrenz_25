@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
-  background-size: 200% 200%;
+  background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   perspective: 1000px;
 }
