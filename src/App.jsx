@@ -27,7 +27,7 @@ const LoadingScreen = () => {
           alt="Symposium Logo"
           className="loading-logo"
         />
-        <div className="loading-text">SYMPOSIUM2K25</div>
+        <div className="loading-text">SYMPOSIUM 2K25</div>
       </div>
     </div>
   );
