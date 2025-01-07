@@ -38,8 +38,8 @@ const Home = () => {
           </p>
         </div>
 
-        <Link to="/register" className="register-button-home">
-          <span className="button-text">Register Now</span>
+        <Link to="/events" className="register-button-home">
+          <span className="button-text">View Events</span>
           <span className="button-glitch"></span>
         </Link>
 
