@@ -5,7 +5,7 @@
   width: 100%;
   padding-top: max(120px, env(safe-area-inset-top));
   position: relative;
-  background-image: url("./../../assets/backup.png");
+  /* background-image: url("./../../assets/home_backup.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,9 +13,10 @@
   background-attachment: scroll;
   will-change: transform;
   isolation: isolate;
-  background-size: 400% 400%;
+  background-size: 200% 200%;
   animation: gradientShift 15s ease infinite;
   perspective: 1000px;
+  filter: brightness(1.5); /* Increase brightness */
 }
 
 @keyframes gradientShift {
@@ -251,6 +252,32 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+/* Keyframes for subtle background movement */
+@keyframes subtleMove {
+  0% {
+    background-position: center top;
+  }
+  50% {
+    background-position: center 10%;
+  }
+  100% {
+    background-position: center top;
+  }
+}
+
+/* Mobile view styles */
+@media (max-width: 767px) {
+  .home-container {
+    background-image: url("./../../assets/home_backup.png"); /* Mobile-specific background image */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center top; /* Initial position */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-attachment: scroll; /* Mobile-friendly scroll behavior */
+    filter: brightness(1.5); /* Adjust brightness */
+    animation: subtleMove 8s ease-in-out infinite; /* Add subtle movement animation */
   }
 }
 
