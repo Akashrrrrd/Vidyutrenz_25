@@ -1,12 +1,13 @@
 .ecards-main-container {
   min-height: 100vh;
-  padding: 80px 40px;
+  padding: 120px 40px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white;
   position: relative;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   perspective: 1000px;
@@ -28,8 +29,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  /* background: rgba(0, 0, 0, 0.7); */
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
   z-index: 1;
+  pointer-events: none;
 }
 
 .ecards-header {
@@ -37,6 +43,18 @@
   z-index: 2;
   text-align: center;
   margin-bottom: 50px;
+  animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .ecards-back-btn {
@@ -54,18 +72,26 @@
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .ecards-back-btn:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-50%) scale(1.05);
   border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .ecards-back-arrow {
   font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+.ecards-back-btn:hover .ecards-back-arrow {
+  transform: translateX(-5px);
 }
 
 .ecards-title {
@@ -73,11 +99,25 @@
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 3px;
-  background: linear-gradient(45deg, #ffd700, #ff6b6b);
+  background: linear-gradient(45deg, #ffd700, #ff6b6b, #4a90e2, #50c878);
+  background-size: 300% 300%;
+  animation: gradientText 6s ease infinite;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes gradientText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .ecards-grid {
@@ -88,26 +128,52 @@
   gap: 30px;
   max-width: 1400px;
   margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .ecards-detail-container {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 25px;
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
 }
 
 .ecards-detail-container:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
   border-color: rgba(255, 215, 0, 0.3);
 }
 
 .ecards-content-wrapper {
   padding: 30px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .ecards-header-section {
@@ -122,6 +188,11 @@
   margin: 0;
   color: #ffd700;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease;
+}
+
+.ecards-detail-container:hover .ecards-event-title {
+  color: #fff;
 }
 
 .ecards-prize-badge {
@@ -130,6 +201,13 @@
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ecards-detail-container:hover .ecards-prize-badge {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .ecards-description {
@@ -137,6 +215,7 @@
   line-height: 1.6;
   margin-bottom: 25px;
   color: #f0f0f0;
+  transition: color 0.3s ease;
 }
 
 .ecards-info-grid {
@@ -151,17 +230,29 @@
   grid-template-columns: auto 1fr;
   gap: 10px;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.ecards-info-item:hover {
+  transform: translateX(5px);
 }
 
 .ecards-info-icon {
   font-size: 1.2rem;
   grid-row: span 2;
+  color: #ffd700;
+  transition: transform 0.3s ease;
+}
+
+.ecards-info-item:hover .ecards-info-icon {
+  transform: scale(1.2);
 }
 
 .ecards-info-label {
   font-size: 0.9rem;
   color: #ffd700;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .ecards-info-value {
@@ -172,27 +263,38 @@
 
 .ecards-reg {
   text-decoration: none;
+  display: block;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
 }
+
+.ecards-reg:hover {
+  transform: translateY(-3px);
+}
+
 .ecards-register-btn {
   width: 100%;
   padding: 15px;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(45deg, #ffd700, #ff6b6b);
+  background: linear-gradient(45deg, #ffd700, #ff6b6b, #4a90e2);
+  background-size: 200% 200%;
   color: #000;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: gradientShift 6s ease infinite;
 }
 
 .ecards-register-btn:hover {
   transform: scale(1.02);
-  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 8px 15px rgba(255, 215, 0, 0.3);
 }
 
 .ecards-btn-icon {
@@ -221,6 +323,10 @@
     display: inline-flex;
     margin-bottom: 20px;
     transform: none;
+  }
+
+  .ecards-back-btn:hover {
+    transform: scale(1.05);
   }
 
   .ecards-header {

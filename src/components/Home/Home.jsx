@@ -20,7 +20,7 @@ const Home = () => {
       <div className={`hero-content ${isVisible ? "visible" : ""}`}>
         <div className="glitch-container">
           <h1 className="main-title" data-text="Vidyutrenz 2025">
-            Vidyutrenz 2025
+            Vidyutrenz 2K25
           </h1>
         </div>
 

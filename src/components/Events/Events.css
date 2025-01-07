@@ -1,4 +1,4 @@
-/* Container with enhanced perspective and dynamic background */
+/* Enhanced Container with Advanced Parallax and Dynamic Background */
 .events-container {
   display: flex;
   flex-wrap: wrap;
@@ -9,24 +9,86 @@
   padding-top: 140px;
   min-height: 100vh;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-  background-size: 400% 400%;
+  background-size: 250% 250%;
   animation: gradientShift 15s ease infinite;
-  perspective: 1000px;
+  perspective: 1500px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced Floating Particles Background with Multiple Layers */
+.events-container::before,
+.events-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.events-container::before {
+  background: radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(255, 215, 0, 0.05) 1px,
+      transparent 1px
+    );
+  background-size: 50px 50px, 30px 30px;
+  animation: particleFloat 20s linear infinite;
+  opacity: 0.5;
+}
+
+.events-container::after {
+  background: radial-gradient(
+      circle at 75% 75%,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      rgba(255, 215, 0, 0.03) 2px,
+      transparent 2px
+    );
+  background-size: 40px 40px, 60px 60px;
+  animation: particleFloat 15s linear infinite reverse;
+  opacity: 0.3;
+}
+
+/* Enhanced Keyframe Animations */
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(0.5deg);
+  }
+  100% {
+    transform: translateY(-50px) rotate(1deg);
+  }
 }
 
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
+    filter: hue-rotate(0deg);
   }
   50% {
     background-position: 100% 50%;
+    filter: hue-rotate(10deg);
   }
   100% {
     background-position: 0% 50%;
+    filter: hue-rotate(0deg);
   }
 }
 
-/* Modernized event card with enhanced 3D effects */
+/* Enhanced Event Card with Advanced 3D and Glassmorphism Effects */
 .event-card {
   position: relative;
   width: 340px;
@@ -36,22 +98,40 @@
   border-radius: 30px;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   transform-style: preserve-3d;
+  animation: cardFloat 8s ease-in-out infinite;
 }
 
-/* Enhanced hover effects with 3D transformation */
+/* Enhanced Card Float Animation */
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotateX(0) rotateY(0) translateZ(0);
+  }
+  25% {
+    transform: translateY(-10px) rotateX(2deg) rotateY(-2deg) translateZ(10px);
+  }
+  75% {
+    transform: translateY(10px) rotateX(-2deg) rotateY(2deg) translateZ(5px);
+  }
+}
+
+/* Enhanced Hover Effects with Smooth Transitions */
 .event-card:hover {
-  transform: translateY(-15px) rotateX(5deg) rotateY(-5deg) scale(1.03);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 12px 25px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  transform: translateY(-15px) rotateX(5deg) rotateY(-5deg) scale(1.05);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 12px 25px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(255, 215, 0, 0.3), inset 0 0 30px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation-play-state: paused;
 }
 
-/* Modernized overlay with gradient */
+/* Enhanced Overlay with Advanced Gradient and Blur */
 .event-overlay {
   position: absolute;
   inset: 0;
@@ -59,7 +139,7 @@
     to bottom,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.4) 40%,
-    rgba(0, 0, 0, 0.9) 100%
+    rgba(0, 0, 0, 0.95) 100%
   );
   display: flex;
   flex-direction: column;
@@ -68,73 +148,127 @@
   padding: 35px;
   text-align: center;
   transform: translateZ(20px);
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(0px);
 }
 
-/* Enhanced typography with modern styling */
+.event-card:hover .event-overlay {
+  backdrop-filter: blur(3px);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+}
+
+/* Enhanced Typography with Animated Gradients and Glow */
 .event-overlay h3 {
   font-size: 1.8rem;
   margin-bottom: 18px;
   text-transform: uppercase;
-  background: linear-gradient(120deg, #ffd700, #ffa500);
+  background: linear-gradient(120deg, #ffd700, #ffa500, #ff8c00, #ffd700);
+  background-size: 300% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: 800;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3);
   transform: translateZ(30px);
+  animation: textGradient 4s linear infinite;
 }
 
+@keyframes textGradient {
+  0% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: hue-rotate(15deg);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+}
+
+/* Enhanced Paragraph Animation */
 .event-overlay p {
   font-size: 1.2rem;
   line-height: 1.7;
   color: #ffffff;
   margin: 0;
   font-weight: 400;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-  opacity: 0.95;
-  transform: translateZ(25px);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(20px) translateZ(25px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
-/* Enhanced shine effect */
-.event-card::after {
+.event-card:hover .event-overlay p {
+  opacity: 1;
+  transform: translateY(0) translateZ(25px);
+}
+
+/* Enhanced Shine Effect with Multiple Layers */
+.event-card::after,
+.event-card::before {
   content: "";
   position: absolute;
   inset: -150%;
+  pointer-events: none;
+  transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.event-card::after {
   background: linear-gradient(
     45deg,
     transparent 30%,
-    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.2) 50%,
     transparent 70%
   );
   transform: rotate(45deg);
-  transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-  pointer-events: none;
+}
+
+.event-card::before {
+  background: linear-gradient(
+    -45deg,
+    transparent 40%,
+    rgba(255, 215, 0, 0.15) 50%,
+    transparent 60%
+  );
+  transform: rotate(-45deg);
 }
 
 .event-card:hover::after {
   inset: -50%;
+  opacity: 0.8;
 }
 
-/* Add subtle pulsing animation to cards */
-@keyframes subtle-pulse {
-  0% {
-    transform: scale(1);
+.event-card:hover::before {
+  inset: -80%;
+  opacity: 0.6;
+}
+
+/* Enhanced Glow Effect on Hover */
+@keyframes cardGlow {
+  0%,
+  100% {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2),
+      0 0 20px rgba(255, 215, 0, 0.2);
   }
   50% {
-    transform: scale(1.005);
-  }
-  100% {
-    transform: scale(1);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(0, 0, 0, 0.3),
+      0 0 40px rgba(255, 215, 0, 0.4);
   }
 }
 
-.event-card {
-  animation: subtle-pulse 3s infinite ease-in-out;
-}
-
-/* Responsive Design with Enhanced Mobile Experience */
+/* Optimized Responsive Design */
 @media screen and (max-width: 768px) {
   .events-container {
     padding: 100px 20px 40px;
@@ -150,11 +284,6 @@
 
   .event-overlay {
     padding: 28px;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 20%,
-      rgba(0, 0, 0, 0.8) 100%
-    );
   }
 
   .event-overlay h3 {
@@ -190,5 +319,25 @@
   .event-overlay p {
     font-size: 1rem;
     line-height: 1.5;
+  }
+}
+
+/* Enhanced Accessibility Support */
+@media (prefers-reduced-motion: reduce) {
+  .events-container,
+  .events-container::before,
+  .events-container::after,
+  .event-card,
+  .event-overlay,
+  .event-overlay h3,
+  .event-card::after,
+  .event-card::before {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
+
+  .event-card:hover {
+    transform: translateY(-5px);
   }
 }
