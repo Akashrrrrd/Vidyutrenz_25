@@ -41,8 +41,9 @@
 }
 
 .navbar-logo img {
-  height: 60px;
-  width: auto;
+  margin-top: 10px;
+  height: 80px;
+  width: 80px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
@@ -149,7 +150,8 @@
   }
 
   .navbar-logo {
-    left: 1rem; /* Adjust logo position for mobile */
+    left: 0.5rem; /* Adjust logo position for mobile */
+    margin-top: 5px;
   }
 
   .nav-links-desktop {
