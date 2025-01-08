@@ -2,6 +2,23 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./EventsCard.css";
 import BackgroundImage from "./../../assets/backup.png";
+import tech_1 from "./../../assets/tech_1.png";
+import tech_2 from "./../../assets/tech_2.png";
+import tech_3 from "./../../assets/tech_3.png";
+import tech_4 from "./../../assets/tech_4.png";
+import tech_5 from "./../../assets/tech_5.png";
+import tech_6 from "./../../assets/tech_6.png";
+import nontech_1 from "./../../assets/nontech_1.png";
+import nontech_2 from "./../../assets/nontech_2.png";
+import nontech_3 from "./../../assets/nontech_3.png";
+import nontech_4 from "./../../assets/nontech_4.png";
+import nontech_5 from "./../../assets/nontech_5.png";
+import nontech_6 from "./../../assets/nontech_6.png";
+import work_1 from "./../../assets/work_1.png";
+import work_2 from "./../../assets/work_2.png";
+import work_3 from "./../../assets/work_3.png";
+import work_4 from "./../../assets/work_4.png";
+import work_5 from "./../../assets/work_5.png";
 
 const EventsCard = () => {
   const { eventType } = useParams();
@@ -20,7 +37,8 @@ const EventsCard = () => {
         registrationFee: "₹100",
         teamSize: "2 Members",
         venue: "Main Auditorium",
-        coordinators: "John (1234567890), Sarah (0987654321)",
+        coordinators: "John (1234567890)",
+        bgImage: tech_1,
       },
       {
         id: 2,
@@ -34,6 +52,7 @@ const EventsCard = () => {
         teamSize: "3 Members",
         venue: "Tech Hub",
         coordinators: "Mike (1234567890), Emma (0987654321)",
+        bgImage: tech_2,
       },
       {
         id: 3,
@@ -47,6 +66,7 @@ const EventsCard = () => {
         teamSize: "2 Members",
         venue: "Electronics Lab",
         coordinators: "Alex (1234567890), Lisa (0987654321)",
+        bgImage: tech_3,
       },
       {
         id: 4,
@@ -60,6 +80,7 @@ const EventsCard = () => {
         teamSize: "Individual",
         venue: "Seminar Hall",
         coordinators: "David (1234567890), Maya (0987654321)",
+        bgImage: tech_4,
       },
       {
         id: 5,
@@ -73,6 +94,7 @@ const EventsCard = () => {
         teamSize: "3 Members",
         venue: "Quiz Hall",
         coordinators: "Prof. James (1234567890), Dr. Anna (0987654321)",
+        bgImage: tech_5,
       },
       {
         id: 6,
@@ -86,6 +108,7 @@ const EventsCard = () => {
         teamSize: "2 Members",
         venue: "Computer Lab",
         coordinators: "Tom (1234567890), Julia (0987654321)",
+        bgImage: tech_6,
       },
     ],
     nontechnical: [
@@ -101,6 +124,7 @@ const EventsCard = () => {
         teamSize: "3 Members",
         venue: "Open Theatre",
         coordinators: "Alex (1234567890), Lisa (0987654321)",
+        bgImage: nontech_1,
       },
       {
         id: 2,
@@ -114,6 +138,7 @@ const EventsCard = () => {
         teamSize: "Group",
         venue: "Auditorium",
         coordinators: "David (1234567890), Maya (0987654321)",
+        bgImage: nontech_2,
       },
       {
         id: 3,
@@ -127,6 +152,7 @@ const EventsCard = () => {
         teamSize: "4 Members",
         venue: "Gaming Zone",
         coordinators: "Tom (1234567890), Julia (0987654321)",
+        bgImage: nontech_3,
       },
       {
         id: 4,
@@ -140,6 +166,7 @@ const EventsCard = () => {
         teamSize: "Individual",
         venue: "Cultural Hall",
         coordinators: "John (1234567890), Sarah (0987654321)",
+        bgImage: nontech_4,
       },
       {
         id: 5,
@@ -153,6 +180,7 @@ const EventsCard = () => {
         teamSize: "2 Members",
         venue: "Quiz Hall",
         coordinators: "Mike (1234567890), Emma (0987654321)",
+        bgImage: nontech_5,
       },
       {
         id: 6,
@@ -166,6 +194,7 @@ const EventsCard = () => {
         teamSize: "4 Members",
         venue: "Sports Arena",
         coordinators: "Prof. James (1234567890), Dr. Anna (0987654321)",
+        bgImage: nontech_6,
       },
     ],
     workshop: [
@@ -181,6 +210,7 @@ const EventsCard = () => {
         teamSize: "Individual",
         venue: "Seminar Hall",
         coordinators: "Tom (1234567890), Julia (0987654321)",
+        bgImage: work_1,
       },
       {
         id: 2,
@@ -194,6 +224,7 @@ const EventsCard = () => {
         teamSize: "Individual",
         venue: "Tech Lab",
         coordinators: "Mike (1234567890), Emma (0987654321)",
+        bgImage: work_2,
       },
       {
         id: 3,
@@ -207,6 +238,7 @@ const EventsCard = () => {
         teamSize: "Individual",
         venue: "Conference Room",
         coordinators: "John (1234567890), Sarah (0987654321)",
+        bgImage: work_3,
       },
       {
         id: 4,
@@ -220,6 +252,7 @@ const EventsCard = () => {
         teamSize: "Individual",
         venue: "Electronics Lab",
         coordinators: "David (1234567890), Maya (0987654321)",
+        bgImage: work_4,
       },
       {
         id: 5,
@@ -233,6 +266,7 @@ const EventsCard = () => {
         teamSize: "Individual",
         venue: "AI Lab",
         coordinators: "Prof. James (1234567890), Dr. Anna (0987654321)",
+        bgImage: work_5,
       },
     ],
   };
@@ -256,7 +290,14 @@ const EventsCard = () => {
 
       <div className="ecards-grid">
         {events.map((event) => (
-          <div key={event.id} className="ecards-detail-container">
+          <div
+            key={event.id}
+            className="ecards-detail-container"
+            style={{
+              backgroundImage: `url(${event.bgImage})`,
+            }}
+          >
+            <div className="ecards-overlay"></div>
             <div className="ecards-content-wrapper">
               <div className="ecards-header-section">
                 <h2 className="ecards-event-title">{event.title}</h2>
