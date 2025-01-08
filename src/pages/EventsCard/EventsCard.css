@@ -11,17 +11,12 @@
   position: relative;
 }
 
-/* Removed the brightness filter and adjusted the background overlay */
+/* Modified background overlay for better content visibility */
 .ecards-main-container::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Reduced opacity for better background visibility */
+  background: rgba(0, 0, 0, 0.3); /* Reduced opacity from 0.5 to 0.3 */
   z-index: 1;
   pointer-events: none;
 }
@@ -62,18 +57,18 @@
     255,
     255,
     255,
-    0.15
-  ); /* Slightly increased for better visibility */
-  backdrop-filter: blur(5px); /* Reduced blur for clearer background */
-  -webkit-backdrop-filter: blur(5px);
+    0.1
+  ); /* Reduced from 0.15 for more transparency */
+  backdrop-filter: blur(3px); /* Reduced blur from 5px */
+  -webkit-backdrop-filter: blur(3px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   z-index: 3;
 }
 
 .ecards-back-btn:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-50%) scale(1.05);
 }
 
@@ -92,7 +87,22 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Enhanced text shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #ffffff 0%, #ffc146 50%, #ffffff 100%);
+
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-15deg);
+  }
 }
 
 .ecards-grid {
@@ -125,24 +135,24 @@
   background-size: cover;
   background-position: center;
   min-height: 500px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Reduced shadow intensity */
 }
 
-/* Adjusted gradient overlay for better background visibility */
+/* Modified gradient overlay for better content visibility */
 .ecards-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.7)
-  );
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  ); /* Reduced opacity */
   z-index: 1;
 }
 
 .ecards-detail-container:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .ecards-content-wrapper {
@@ -152,6 +162,12 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Added subtle background for better text readability */
 }
 
 .ecards-header-section {
@@ -167,8 +183,8 @@
   font-size: 2rem;
   margin: 0;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Enhanced text shadow */
-  font-weight: 600; /* Added for better visibility */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
 }
 
 .ecards-prize-badge {
@@ -178,7 +194,7 @@
   font-size: 0.9rem;
   font-weight: bold;
   color: black;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added for better visibility */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .ecards-description {
@@ -186,7 +202,7 @@
   line-height: 1.6;
   margin-bottom: 25px;
   color: #ffffff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Added for better visibility */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .ecards-info-grid {
@@ -206,20 +222,20 @@
 .ecards-info-icon {
   font-size: 1.2rem;
   grid-row: span 2;
-  color: #ffd700; /* Added for better visibility */
+  color: #ffd700;
 }
 
 .ecards-info-label {
   font-size: 0.9rem;
   color: #ffd700;
-  font-weight: 600; /* Enhanced for better visibility */
+  font-weight: 600;
 }
 
 .ecards-info-value {
   font-size: 1rem;
   color: #ffffff;
   grid-column: 2;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Added for better visibility */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .ecards-register-btn {
@@ -238,12 +254,12 @@
   align-items: center;
   gap: 10px;
   margin-top: auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Added for better visibility */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .ecards-register-btn:hover {
   transform: scale(1.02);
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.25);
 }
 
 .ecards-reg {

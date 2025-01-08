@@ -58,6 +58,12 @@
   line-height: 1.1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #ffffff 0%, #9146ff 50%, #ffffff 100%);
+
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 3s linear infinite;
 }
 
 .contact-subtitle {
