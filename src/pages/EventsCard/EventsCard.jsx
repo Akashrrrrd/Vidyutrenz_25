@@ -127,6 +127,20 @@ const EventsCard = () => {
         bgImage: nontech_1,
       },
       {
+        id: 4,
+        title: "Otaku Unleashed",
+        description:
+          "Celebrate anime culture with cosplay, trivia, and exciting games. A paradise for all anime enthusiasts!",
+        date: "2024-02-16",
+        time: "1:00 PM",
+        prize: "₹4,000",
+        registrationFee: "₹70",
+        teamSize: "Individual",
+        venue: "Cultural Hall",
+        coordinators: "John (1234567890), Sarah (0987654321)",
+        bgImage: nontech_4,
+      },
+      {
         id: 2,
         title: "Music Galatta",
         description:
@@ -154,20 +168,7 @@ const EventsCard = () => {
         coordinators: "Tom (1234567890), Julia (0987654321)",
         bgImage: nontech_3,
       },
-      {
-        id: 4,
-        title: "Otaku Unleashed",
-        description:
-          "Celebrate anime culture with cosplay, trivia, and exciting games. A paradise for all anime enthusiasts!",
-        date: "2024-02-16",
-        time: "1:00 PM",
-        prize: "₹4,000",
-        registrationFee: "₹70",
-        teamSize: "Individual",
-        venue: "Cultural Hall",
-        coordinators: "John (1234567890), Sarah (0987654321)",
-        bgImage: nontech_4,
-      },
+
       {
         id: 5,
         title: "Genius Mindz",
