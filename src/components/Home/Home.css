@@ -69,10 +69,9 @@
   text-transform: uppercase;
   letter-spacing: max(2px, 0.05em);
   margin-bottom: clamp(1rem, 3vh, 2rem);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(128, 0, 255, 0.5),
-    0 0 40px rgba(191, 64, 255, 0.3);
-
-  background: linear-gradient(135deg, #ffffff 0%, #ff007f 50%, #1c1c1c 100%);
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 255, 0.5),
+    0 0 40px rgba(0, 128, 255, 0.3); */
+  background: linear-gradient(135deg, #2196f3 0%, #ff5722 100%);
 
   background-size: 200% auto;
   -webkit-background-clip: text;
