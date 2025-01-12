@@ -39,6 +39,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Neha (8667798972)",
         bgImage: tech_1,
+        registrationLink: "https://example.com/register/hypothesis-hub",
       },
       {
         id: 2,
@@ -53,6 +54,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Aishwaryaa (8939112044)",
         bgImage: tech_2,
+        registrationLink: "https://example.com/register/electro-expo",
       },
       {
         id: 3,
@@ -67,6 +69,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Harini (7904530322)",
         bgImage: tech_3,
+        registrationLink: "https://example.com/register/circuit-wars",
       },
       {
         id: 4,
@@ -81,6 +84,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "A Sindhuja (6382410462)",
         bgImage: tech_4,
+        registrationLink: "https://example.com/register/debate-arena",
       },
       {
         id: 5,
@@ -95,6 +99,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Glory (9600873711)",
         bgImage: tech_5,
+        registrationLink: "https://example.com/register/brainiac",
       },
       {
         id: 6,
@@ -109,6 +114,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Hari Preyadharshan S P (9994881877)",
         bgImage: tech_6,
+        registrationLink: "https://example.com/register/code-in-phase",
       },
     ],
 
@@ -126,6 +132,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Hanish Britto (9626718361)",
         bgImage: nontech_1,
+        registrationLink: "https://example.com/register/movie-maniac",
       },
       {
         id: 2,
@@ -140,6 +147,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Shrinithi S (7010270035)",
         bgImage: nontech_2,
+        registrationLink: "https://example.com/register/music-galatta",
       },
       {
         id: 3,
@@ -154,6 +162,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Jai Vasanth (9363573308), Vamsi Kumar (8122750426)",
         bgImage: nontech_3,
+        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScJdcXUNDWCAyhOv56tZ6fkxhkItQYjai-7LQp9tcQIUCkwgw/viewform",
       },
       {
         id: 4,
@@ -168,6 +177,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Bhavan R B (9384207935)",
         bgImage: nontech_4,
+        registrationLink: "https://example.com/register/otaku-unleashed",
       },
       {
         id: 5,
@@ -182,6 +192,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Bala Saravanan (6369628857)",
         bgImage: nontech_5,
+        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSev3Q1HOS7fmAM-mJPR513o7lVnZWsdXPMHvNrYxrhyVxyFoA/viewform",
       },
       {
         id: 6,
@@ -196,6 +207,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Nitheesh Kumar (8148514520), Mohamed Hamsa (6382347002)",
         bgImage: nontech_6,
+        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdVKHCPj93nzAUmNIqFa0shd6sCo7AXNuBk7DwlwfXmPXa_vA/viewform",
       },
     ],
     workshop: [
@@ -213,6 +225,7 @@ const EventsCard = () => {
         coordinators:
           "Aravind (8270225079), Hitesh Varshan (9840151818), Paveithra (9003210978)",
         bgImage: work_1,
+        registrationLink: "https://example.com/register/iot-workshop",
       },
       {
         id: 2,
@@ -227,6 +240,7 @@ const EventsCard = () => {
         venue: "VLSI Lab",
         coordinators: "Sarithra (7397283281), Dhenishaa (9444922376)",
         bgImage: work_2,
+        registrationLink: "https://example.com/register/vlsi-design",
       },
       {
         id: 3,
@@ -241,6 +255,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Tharun (9384627647)",
         bgImage: work_3,
+        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdpHTp2xC1FBTPgUAOev_3R218zOdV14edFZEIsJZ3W2h5Jkw/viewform",
       },
       {
         id: 4,
@@ -255,6 +270,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Akhileash (9952211442)",
         bgImage: work_4,
+        registrationLink: "https://example.com/register/pcb-design",
       },
       {
         id: 5,
@@ -269,6 +285,7 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Hemavathi (7305407408)",
         bgImage: work_5,
+        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdiu7kAqOWTaHwKbEG1UgIA-ObI91xf-YnhhAQwdpo61_v2zQ/viewform",
       },
     ],
   };
@@ -327,16 +344,6 @@ const EventsCard = () => {
                   </span>
                 </div>
                 <div className="ecards-info-item">
-                  <span className="ecards-info-icon">👥</span>
-                  <span className="ecards-info-label">Team:</span>
-                  <span className="ecards-info-value">{event.teamSize}</span>
-                </div>
-                <div className="ecards-info-item">
-                  <span className="ecards-info-icon">📍</span>
-                  <span className="ecards-info-label">Venue:</span>
-                  <span className="ecards-info-value">{event.venue}</span>
-                </div>
-                <div className="ecards-info-item">
                   <span className="ecards-info-icon">👤</span>
                   <span className="ecards-info-label">Contact:</span>
                   <span className="ecards-info-value">
@@ -345,12 +352,17 @@ const EventsCard = () => {
                 </div>
               </div>
 
-              <Link to="/register" className="ecards-reg">
+              <a
+                href={event.registrationLink}
+                className="ecards-reg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button className="ecards-register-btn">
                   <span className="ecards-btn-text">Register Now</span>
                   <span className="ecards-btn-icon">→</span>
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         ))}
