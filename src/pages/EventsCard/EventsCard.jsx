@@ -32,7 +32,7 @@ const EventsCard = () => {
         description:
           "Challenge yourself with real-world problem-solving scenarios. Use your analytical thinking and creativity to hypothesize solutions.",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹3000",
         registrationFee: "₹100",
         teamSize: "2 Members",
@@ -46,7 +46,7 @@ const EventsCard = () => {
         description:
           "Explore and present innovative ideas in electronics. Showcase your circuits, gadgets, and cutting-edge prototypes.",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹3000",
         registrationFee: "₹150",
         teamSize: "3 Members",
@@ -60,7 +60,7 @@ const EventsCard = () => {
         description:
           "Compete in an exciting race to design and debug electronic circuits. A thrilling event for electronics enthusiasts!",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹3000",
         registrationFee: "₹120",
         teamSize: "2 Members",
@@ -74,7 +74,7 @@ const EventsCard = () => {
         description:
           "Showcase your debating skills and battle it out on trending tech topics. Convince the judges with your logic and arguments.",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹3000",
         registrationFee: "₹80",
         teamSize: "Individual",
@@ -88,7 +88,7 @@ const EventsCard = () => {
         description:
           "An ultimate quiz competition for tech enthusiasts. Test your knowledge in various fields of science and technology.",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹3000",
         registrationFee: "₹100",
         teamSize: "3 Members",
@@ -102,7 +102,7 @@ const EventsCard = () => {
         description:
           "Solve challenging coding problems and compete against the best minds. Optimize your solutions and climb the leaderboard!",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹3000",
         registrationFee: "₹200",
         teamSize: "2 Members",
@@ -119,7 +119,7 @@ const EventsCard = () => {
         description:
           "Guess movies, answer trivia, and showcase your movie knowledge in this fun and interactive event.",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹1500",
         registrationFee: "₹50",
         teamSize: "3 Members",
@@ -133,7 +133,7 @@ const EventsCard = () => {
         description:
           "Sing, dance, or jam with your friends. A musical extravaganza to let your talents shine!",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹1500",
         registrationFee: "₹80",
         teamSize: "Group",
@@ -147,7 +147,7 @@ const EventsCard = () => {
         description:
           "Gear up for an intense gaming showdown. Compete in the popular battle royale game and dominate the battlefield!",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹1500",
         registrationFee: "₹100",
         teamSize: "4 Members",
@@ -161,7 +161,7 @@ const EventsCard = () => {
         description:
           "Celebrate anime culture with cosplay, trivia, and exciting games. A paradise for all anime enthusiasts!",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹1500",
         registrationFee: "₹70",
         teamSize: "Individual",
@@ -175,7 +175,7 @@ const EventsCard = () => {
         description:
           "Put your brain to the test with puzzles, riddles, and brain teasers. An event for the sharpest minds.",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹1500",
         registrationFee: "₹60",
         teamSize: "2 Members",
@@ -189,7 +189,7 @@ const EventsCard = () => {
         description:
           "Experience the thrill of managing a cricket team in a mock IPL auction. Build the perfect squad and compete for glory!",
         date: "2025-02-04",
-        time: "11:00 AM",
+        time: "Forenoon",
         prize: "₹1500",
         registrationFee: "₹120",
         teamSize: "4 Members",
@@ -204,8 +204,8 @@ const EventsCard = () => {
         title: "IoT Workshop",
         description:
           "Learn the fundamentals of the Internet of Things. Build and deploy IoT devices to automate tasks.",
-        date: "2024-02-17",
-        time: "10:00 AM",
+        date: "2025-02-04",
+        time: "Forenoon",
         prize: "Certification + IoT Kit",
         registrationFee: "₹300",
         teamSize: "Individual",
@@ -218,8 +218,8 @@ const EventsCard = () => {
         title: "VLSI Design",
         description:
           "Explore the world of Very Large-Scale Integration. Learn to design and implement digital circuits.",
-        date: "2024-02-18",
-        time: "11:00 AM",
+        date: "2025-02-04",
+        time: "Forenoon",
         prize: "Certification + Tools Access",
         registrationFee: "₹350",
         teamSize: "Individual",
@@ -232,8 +232,8 @@ const EventsCard = () => {
         title: "5G Technology",
         description:
           "Understand the future of connectivity with 5G. Gain insights into its architecture and applications.",
-        date: "2024-02-18",
-        time: "2:00 PM",
+        date: "2025-02-04",
+        time: "Forenoon",
         prize: "Certification",
         registrationFee: "₹250",
         teamSize: "Individual",
@@ -246,8 +246,8 @@ const EventsCard = () => {
         title: "PCB Design",
         description:
           "Learn to design Printed Circuit Boards using modern tools. Bring your electronics projects to life.",
-        date: "2024-02-17",
-        time: "3:00 PM",
+        date: "2025-02-04",
+        time: "Forenoon",
         prize: "Certification + Free Software",
         registrationFee: "₹300",
         teamSize: "Individual",
@@ -260,8 +260,8 @@ const EventsCard = () => {
         title: "Generative AI",
         description:
           "Dive into the fascinating world of AI. Build your own generative AI models for creative and practical applications.",
-        date: "2024-02-18",
-        time: "10:00 AM",
+        date: "2025-02-04",
+        time: "Forenoon",
         prize: "Certification + Project Showcase",
         registrationFee: "₹400",
         teamSize: "Individual",
