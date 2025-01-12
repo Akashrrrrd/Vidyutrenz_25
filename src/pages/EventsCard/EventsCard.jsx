@@ -210,7 +210,8 @@ const EventsCard = () => {
         registrationFee: "₹300",
         teamSize: "Individual",
         venue: "IoT",
-        coordinators: "Tom (1234567890), Julia (0987654321)",
+        coordinators:
+          "Aravind (8270225079), Hitesh Varshan (9840151818), Paveithra (9003210978)",
         bgImage: work_1,
       },
       {
@@ -224,7 +225,7 @@ const EventsCard = () => {
         registrationFee: "₹350",
         teamSize: "Individual",
         venue: "VLSI Lab",
-        coordinators: "Mike (1234567890), Emma (0987654321)",
+        coordinators: "Sarithra (7397283281), Dhenishaa (9444922376)",
         bgImage: work_2,
       },
       {
@@ -238,7 +239,7 @@ const EventsCard = () => {
         registrationFee: "₹250",
         teamSize: "Individual",
         venue: "TBD",
-        coordinators: "John (1234567890), Sarah (0987654321)",
+        coordinators: "Tharun (9384627647)",
         bgImage: work_3,
       },
       {
@@ -252,7 +253,7 @@ const EventsCard = () => {
         registrationFee: "₹300",
         teamSize: "Individual",
         venue: "TBD",
-        coordinators: "David (1234567890), Maya (0987654321)",
+        coordinators: "Akhileash (9952211442)",
         bgImage: work_4,
       },
       {
@@ -266,7 +267,7 @@ const EventsCard = () => {
         registrationFee: "₹400",
         teamSize: "Individual",
         venue: "TBD",
-        coordinators: "Prof. James (1234567890), Dr. Anna (0987654321)",
+        coordinators: "Hemavathi (7305407408)",
         bgImage: work_5,
       },
     ],
