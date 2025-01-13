@@ -156,7 +156,7 @@ const EventsCard = () => {
           "Gear up for an intense gaming showdown. Compete in the popular battle royale game and dominate the battlefield!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹1500",
+        prize: "₹3000",
         registrationFee: "Free Entry",
         teamSize: "4 Members",
         venue: "TBD",
