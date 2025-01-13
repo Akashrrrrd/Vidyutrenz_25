@@ -32,9 +32,9 @@ const EventsCard = () => {
         description:
           "Challenge yourself with real-world problem-solving scenarios. Use your analytical thinking and creativity to hypothesize solutions.",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹3000",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "2 Members",
         venue: "TBD",
         coordinators: "Neha (8667798972)",
@@ -47,9 +47,9 @@ const EventsCard = () => {
         description:
           "Explore and present innovative ideas in electronics. Showcase your circuits, gadgets, and cutting-edge prototypes.",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹3000",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "3 Members",
         venue: "TBD",
         coordinators: "Aishwaryaa (8939112044)",
@@ -62,9 +62,9 @@ const EventsCard = () => {
         description:
           "Compete in an exciting race to design and debug electronic circuits. A thrilling event for electronics enthusiasts!",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹3000",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "2 Members",
         venue: "TBD",
         coordinators: "Harini (7904530322)",
@@ -77,9 +77,9 @@ const EventsCard = () => {
         description:
           "Showcase your debating skills and battle it out on trending tech topics. Convince the judges with your logic and arguments.",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹3000",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "Individual",
         venue: "TBD",
         coordinators: "A Sindhuja (6382410462)",
@@ -92,9 +92,9 @@ const EventsCard = () => {
         description:
           "An ultimate quiz competition for tech enthusiasts. Test your knowledge in various fields of science and technology.",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹3000",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "3 Members",
         venue: "TBD",
         coordinators: "Glory (9600873711)",
@@ -107,9 +107,9 @@ const EventsCard = () => {
         description:
           "Solve challenging coding problems and compete against the best minds. Optimize your solutions and climb the leaderboard!",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹3000",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "2 Members",
         venue: "TBD",
         coordinators: "Hari Preyadharshan S P (9994881877)",
@@ -125,9 +125,9 @@ const EventsCard = () => {
         description:
           "Guess movies, answer trivia, and showcase your movie knowledge in this fun and interactive event.",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹1500",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "3 Members",
         venue: "TBD",
         coordinators: "Hanish Britto (9626718361)",
@@ -140,9 +140,9 @@ const EventsCard = () => {
         description:
           "Sing, dance, or jam with your friends. A musical extravaganza to let your talents shine!",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹1500",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "Group",
         venue: "TBD",
         coordinators: "Shrinithi S (7010270035)",
@@ -155,9 +155,9 @@ const EventsCard = () => {
         description:
           "Gear up for an intense gaming showdown. Compete in the popular battle royale game and dominate the battlefield!",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹1500",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "4 Members",
         venue: "TBD",
         coordinators: "Jai Vasanth (9363573308), Vamsi Kumar (8122750426)",
@@ -170,9 +170,9 @@ const EventsCard = () => {
         description:
           "Celebrate anime culture with cosplay, trivia, and exciting games. A paradise for all anime enthusiasts!",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹1500",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "Individual",
         venue: "TBD",
         coordinators: "Bhavan R B (9384207935)",
@@ -185,9 +185,9 @@ const EventsCard = () => {
         description:
           "Put your brain to the test with puzzles, riddles, and brain teasers. An event for the sharpest minds.",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹1500",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "2 Members",
         venue: "TBD",
         coordinators: "Bala Saravanan (6369628857)",
@@ -200,9 +200,9 @@ const EventsCard = () => {
         description:
           "Experience the thrill of managing a cricket team in a mock IPL auction. Build the perfect squad and compete for glory!",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "₹1500",
-        registrationFee: "₹300",
+        registrationFee: "Free Entry",
         teamSize: "4 Members",
         venue: "TBD",
         coordinators: "Nitheesh Kumar (8148514520), Mohamed Hamsa (6382347002)",
@@ -217,7 +217,7 @@ const EventsCard = () => {
         description:
           "Learn the fundamentals of the Internet of Things. Build and deploy IoT devices to automate tasks.",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "Certification + IoT Kit",
         registrationFee: "₹150",
         teamSize: "Individual",
@@ -233,7 +233,7 @@ const EventsCard = () => {
         description:
           "Explore the world of Very Large-Scale Integration. Learn to design and implement digital circuits.",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "Certification + Tools Access",
         registrationFee: "₹150",
         teamSize: "Individual",
@@ -248,7 +248,7 @@ const EventsCard = () => {
         description:
           "Understand the future of connectivity with 5G. Gain insights into its architecture and applications.",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "Certification",
         registrationFee: "₹150",
         teamSize: "Individual",
@@ -263,7 +263,7 @@ const EventsCard = () => {
         description:
           "Learn to design Printed Circuit Boards using modern tools. Bring your electronics projects to life.",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "Certification + Free Software",
         registrationFee: "₹150",
         teamSize: "Individual",
@@ -278,7 +278,7 @@ const EventsCard = () => {
         description:
           "Dive into the fascinating world of AI. Build your own generative AI models for creative and practical applications.",
         date: "2025-02-04",
-        time: "Forenoon",
+        time: "10AM - 2:30PM",
         prize: "Certification + Project Showcase",
         registrationFee: "₹150",
         teamSize: "Individual",
@@ -338,7 +338,7 @@ const EventsCard = () => {
                 </div>
                 <div className="ecards-info-item">
                   <span className="ecards-info-icon">💰</span>
-                  <span className="ecards-info-label">Fee:</span>
+                  <span className="ecards-info-label">Entry Fee:</span>
                   <span className="ecards-info-value">
                     {event.registrationFee}
                   </span>

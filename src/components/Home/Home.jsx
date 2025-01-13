@@ -46,12 +46,14 @@ const Home = () => {
         <div className="event-details">
           <div className="detail-item">
             <span className="detail-label">Date</span>
-            <span className="detail-value">February 04, 2025</span>
+            <time className="detail-value" dateTime="2025-02-04">
+              February 04, 2025 Tuesday
+            </time>
           </div>
           <div className="detail-item">
             <span className="detail-label">Venue</span>
             <span className="detail-value">
-              Chennai Institute of Technology, Kundrathur
+              Chennai Institute of Technology, Sarathy Nagar, Kundrathur
             </span>
           </div>
         </div>

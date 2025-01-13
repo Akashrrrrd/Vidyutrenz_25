@@ -30,7 +30,7 @@ const Contact = () => {
     {
       icon: <Phone className="contact-icon" />,
       title: "Call Us",
-      content: "+1 (888) SYMPO-24",
+      content: "+91 8825869348",
       link: "tel:+18887966724",
     },
     {

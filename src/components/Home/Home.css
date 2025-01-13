@@ -13,7 +13,7 @@
   background-attachment: scroll;
   will-change: transform;
   isolation: isolate;
-  background-size: 200% 200%;
+  background-size: 150% 150%;
   animation: gradientShift 15s ease infinite;
   perspective: 1000px;
   filter: brightness(1.5); /* Increase brightness */
