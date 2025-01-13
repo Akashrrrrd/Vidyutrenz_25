@@ -53,7 +53,7 @@ const Home = () => {
           <div className="detail-item">
             <span className="detail-label">Venue</span>
             <span className="detail-value">
-              Chennai Institute of Technology, Sarathy Nagar, Kundrathur
+              Chennai Institute of Technology, Kundrathur
             </span>
           </div>
         </div>
