@@ -270,7 +270,6 @@
 /* Mobile view styles */
 @media (max-width: 767px) {
   .home-container {
-    background-image: url("./../../assets/home_backup.png"); /* Mobile-specific background image */
     background-size: cover; /* Ensures the image covers the container */
     background-position: center top; /* Initial position */
     background-repeat: no-repeat; /* Prevent repetition */

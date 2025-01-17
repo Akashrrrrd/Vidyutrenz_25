@@ -25,9 +25,11 @@ import NonTech_3 from "./../../assets/NonTech_3.pdf";
 import NonTech_4 from "./../../assets/NonTech_4.pdf";
 import NonTech_5 from "./../../assets/NonTech_5.pdf";
 import NonTech_6 from "./../../assets/NonTech_6.pdf";
+import Tech_1 from "./../../assets/Tech_1.pdf";
 import Tech_2 from "./../../assets/Tech_2.pdf";
 import Tech_3 from "./../../assets/Tech_3.pdf";
 import Tech_4 from "./../../assets/Tech_4.pdf";
+import Tech_5 from "./../../assets/Tech_5.pdf";
 import Tech_6 from "./../../assets/Tech_6.pdf";
 import Work_1 from "./../../assets/Work_1.pdf";
 import Work_2 from "./../../assets/Work_2.pdf";
@@ -56,7 +58,7 @@ const EventsCard = () => {
         bgImage: tech_1,
         registrationLink:
           "https://docs.google.com/forms/d/e/1FAIpQLSdI5-51gR-7dobYRuLrVAS4jBLSmZ2BLr1Zuyin2YX6GIlWdQ/viewform",
-        rulesLink: "/pdfs/hypothesis_hub_rules.pdf",
+        rulesLink: Tech_1,
       },
       {
         id: 2,
@@ -124,7 +126,7 @@ const EventsCard = () => {
         bgImage: tech_5,
         registrationLink:
           "https://docs.google.com/forms/d/e/1FAIpQLSdAlggXmlU_SwtYV7rt7IgRDTKIUwPlWnbtM0woHlXnbAYG8g/viewform",
-        rulesLink: "/pdfs/brainiac_rules.pdf",
+        rulesLink: Tech_5,
       },
       {
         id: 6,

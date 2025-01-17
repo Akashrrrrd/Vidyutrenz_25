@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 // Import your background image
 import BackgroundImage from "../../assets/backup.png";
+import BackgroundImageMobile from "./../../assets/backup_mobile.png";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
