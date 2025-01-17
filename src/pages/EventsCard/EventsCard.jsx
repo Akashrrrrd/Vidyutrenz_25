@@ -19,6 +19,21 @@ import work_2 from "./../../assets/work_2.png";
 import work_3 from "./../../assets/work_3.png";
 import work_4 from "./../../assets/work_4.png";
 import work_5 from "./../../assets/work_5.png";
+import NonTech_1 from "./../../assets/NonTech_1.pdf";
+import NonTech_2 from "./../../assets/NonTech_2.pdf";
+import NonTech_3 from "./../../assets/NonTech_3.pdf";
+import NonTech_4 from "./../../assets/NonTech_4.pdf";
+import NonTech_5 from "./../../assets/NonTech_5.pdf";
+import NonTech_6 from "./../../assets/NonTech_6.pdf";
+import Tech_2 from "./../../assets/Tech_2.pdf";
+import Tech_3 from "./../../assets/Tech_3.pdf";
+import Tech_4 from "./../../assets/Tech_4.pdf";
+import Tech_6 from "./../../assets/Tech_6.pdf";
+import Work_1 from "./../../assets/Work_1.pdf";
+import Work_2 from "./../../assets/Work_2.pdf";
+import Work_3 from "./../../assets/Work_3.pdf";
+import Work_4 from "./../../assets/Work_4.pdf";
+import Work_5 from "./../../assets/Work_5.pdf";
 
 const EventsCard = () => {
   const { eventType } = useParams();
@@ -39,7 +54,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Neha (8667798972)",
         bgImage: tech_1,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdI5-51gR-7dobYRuLrVAS4jBLSmZ2BLr1Zuyin2YX6GIlWdQ/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdI5-51gR-7dobYRuLrVAS4jBLSmZ2BLr1Zuyin2YX6GIlWdQ/viewform",
+        rulesLink: "/pdfs/hypothesis_hub_rules.pdf",
       },
       {
         id: 2,
@@ -54,7 +71,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Aishwaryaa (8939112044)",
         bgImage: tech_2,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdj2OofYD3KstdKYr71y1lJlTZeHoroZpliQbOGUX1zVlhEKw/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdj2OofYD3KstdKYr71y1lJlTZeHoroZpliQbOGUX1zVlhEKw/viewform",
+        rulesLink: Tech_2,
       },
       {
         id: 3,
@@ -69,7 +88,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Harini (7904530322)",
         bgImage: tech_3,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeUxLUgS8O2W3Vwt-HGni4VTDn_NEUzoaOFkTmV7gXtaE6mAw/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSeUxLUgS8O2W3Vwt-HGni4VTDn_NEUzoaOFkTmV7gXtaE6mAw/viewform",
+        rulesLink: Tech_3,
       },
       {
         id: 4,
@@ -84,7 +105,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "A Sindhuja (6382410462)",
         bgImage: tech_4,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScQpExrxwCmKighYCrs4JqAF7FaHXAMeksVkClmVZ2rfcrEew/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLScQpExrxwCmKighYCrs4JqAF7FaHXAMeksVkClmVZ2rfcrEew/viewform",
+        rulesLink: Tech_4,
       },
       {
         id: 5,
@@ -99,7 +122,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Glory (9600873711)",
         bgImage: tech_5,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdAlggXmlU_SwtYV7rt7IgRDTKIUwPlWnbtM0woHlXnbAYG8g/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdAlggXmlU_SwtYV7rt7IgRDTKIUwPlWnbtM0woHlXnbAYG8g/viewform",
+        rulesLink: "/pdfs/brainiac_rules.pdf",
       },
       {
         id: 6,
@@ -114,7 +139,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Hari Preyadharshan S P (9994881877)",
         bgImage: tech_6,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeY0pzRTYDYDNA6zLJ83nyJhsj9tTIrS8hu27Bn_4A6mhSHvw/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSeY0pzRTYDYDNA6zLJ83nyJhsj9tTIrS8hu27Bn_4A6mhSHvw/viewform",
+        rulesLink: Tech_6,
       },
     ],
 
@@ -132,7 +159,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Hanish Britto (9626718361)",
         bgImage: nontech_1,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSenXQLhkWxyuhfA6PtjVL1yG5WUzf0XWShMKp4VtzFQp-w1sA/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSenXQLhkWxyuhfA6PtjVL1yG5WUzf0XWShMKp4VtzFQp-w1sA/viewform",
+        rulesLink: NonTech_1,
       },
       {
         id: 2,
@@ -147,7 +176,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Shrinithi S (7010270035)",
         bgImage: nontech_2,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdWJNkColpBxuG2gWoYamxNYdORJehHneA3ZXJ-Ln5zbg5Mgg/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdWJNkColpBxuG2gWoYamxNYdORJehHneA3ZXJ-Ln5zbg5Mgg/viewform",
+        rulesLink: NonTech_2,
       },
       {
         id: 3,
@@ -162,7 +193,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Jai Vasanth (9363573308), Vamsi Kumar (8122750426)",
         bgImage: nontech_3,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScJdcXUNDWCAyhOv56tZ6fkxhkItQYjai-7LQp9tcQIUCkwgw/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLScJdcXUNDWCAyhOv56tZ6fkxhkItQYjai-7LQp9tcQIUCkwgw/viewform",
+        rulesLink: NonTech_3,
       },
       {
         id: 4,
@@ -177,7 +210,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Bhavan R B (9384207935)",
         bgImage: nontech_4,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdZ5m8-IbzOBVCwrtSAoJe4dFD1ywz6w88uJ_8QXf-nmXDjrQ/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdZ5m8-IbzOBVCwrtSAoJe4dFD1ywz6w88uJ_8QXf-nmXDjrQ/viewform",
+        rulesLink: NonTech_4,
       },
       {
         id: 5,
@@ -192,7 +227,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Bala Saravanan (6369628857)",
         bgImage: nontech_5,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSev3Q1HOS7fmAM-mJPR513o7lVnZWsdXPMHvNrYxrhyVxyFoA/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSev3Q1HOS7fmAM-mJPR513o7lVnZWsdXPMHvNrYxrhyVxyFoA/viewform",
+        rulesLink: NonTech_5,
       },
       {
         id: 6,
@@ -207,7 +244,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Nitheesh Kumar (8148514520), Mohamed Hamsa (6382347002)",
         bgImage: nontech_6,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdVKHCPj93nzAUmNIqFa0shd6sCo7AXNuBk7DwlwfXmPXa_vA/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdVKHCPj93nzAUmNIqFa0shd6sCo7AXNuBk7DwlwfXmPXa_vA/viewform",
+        rulesLink: NonTech_6,
       },
     ],
     workshop: [
@@ -218,14 +257,16 @@ const EventsCard = () => {
           "Learn the fundamentals of the Internet of Things. Build and deploy IoT devices to automate tasks.",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "Certification + IoT Kit",
+        prize: "Certification",
         registrationFee: "₹150",
         teamSize: "Individual",
         venue: "IoT",
         coordinators:
           "Aravind (8270225079), Hitesh Varshan (9840151818), Paveithra (9003210978)",
         bgImage: work_1,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSf5wiJMYIrqd_01p2CKvVUokJ92tIG3KCx5ddCWg6uiqcoFYg/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSf5wiJMYIrqd_01p2CKvVUokJ92tIG3KCx5ddCWg6uiqcoFYg/viewform",
+        rulesLink: Work_1,
       },
       {
         id: 2,
@@ -234,13 +275,15 @@ const EventsCard = () => {
           "Explore the world of Very Large-Scale Integration. Learn to design and implement digital circuits.",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "Certification + Tools Access",
+        prize: "Certification",
         registrationFee: "₹150",
         teamSize: "Individual",
         venue: "VLSI Lab",
         coordinators: "Sarithra (7397283281), Dhenishaa (9444922376)",
         bgImage: work_2,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScpOtUFLDmZADsgkvOhvmLEeDKTW0iiJhfli3BlhU9xo567Xw/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLScpOtUFLDmZADsgkvOhvmLEeDKTW0iiJhfli3BlhU9xo567Xw/viewform",
+        rulesLink: Work_2,
       },
       {
         id: 3,
@@ -255,7 +298,9 @@ const EventsCard = () => {
         venue: "TBD",
         coordinators: "Tharun (9384627647)",
         bgImage: work_3,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdpHTp2xC1FBTPgUAOev_3R218zOdV14edFZEIsJZ3W2h5Jkw/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdpHTp2xC1FBTPgUAOev_3R218zOdV14edFZEIsJZ3W2h5Jkw/viewform",
+        rulesLink: Work_3,
       },
       {
         id: 4,
@@ -264,13 +309,15 @@ const EventsCard = () => {
           "Learn to design Printed Circuit Boards using modern tools. Bring your electronics projects to life.",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "Certification + Free Software",
+        prize: "Certification",
         registrationFee: "₹150",
         teamSize: "Individual",
         venue: "TBD",
         coordinators: "Akhileash (9952211442)",
         bgImage: work_4,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfiN-C7aL4kFMBKv_-rrEr8UK4wKN_X6IyIsY-hGJCVIpE99A/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSfiN-C7aL4kFMBKv_-rrEr8UK4wKN_X6IyIsY-hGJCVIpE99A/viewform",
+        rulesLink: Work_4,
       },
       {
         id: 5,
@@ -279,13 +326,15 @@ const EventsCard = () => {
           "Dive into the fascinating world of AI. Build your own generative AI models for creative and practical applications.",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "Certification + Project Showcase",
+        prize: "Certification",
         registrationFee: "₹150",
         teamSize: "Individual",
         venue: "TBD",
         coordinators: "Hemavathi (7305407408)",
         bgImage: work_5,
-        registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdiu7kAqOWTaHwKbEG1UgIA-ObI91xf-YnhhAQwdpo61_v2zQ/viewform",
+        registrationLink:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdiu7kAqOWTaHwKbEG1UgIA-ObI91xf-YnhhAQwdpo61_v2zQ/viewform",
+        rulesLink: Work_5,
       },
     ],
   };
@@ -293,6 +342,10 @@ const EventsCard = () => {
   useEffect(() => {
     setEvents(eventData[eventType.toLowerCase()] || []);
   }, [eventType]);
+
+  const handleRulesDownload = (rulesLink) => {
+    window.open(rulesLink, "_blank");
+  };
 
   return (
     <div
@@ -352,17 +405,29 @@ const EventsCard = () => {
                 </div>
               </div>
 
-              <a
-                href={event.registrationLink}
-                className="ecards-reg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="ecards-register-btn">
-                  <span className="ecards-btn-text">Register Now</span>
-                  <span className="ecards-btn-icon">→</span>
-                </button>
-              </a>
+              <div className="ecards-button-group">
+                <a
+                  href={event.registrationLink}
+                  className="ecards-reg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="ecards-register-btn">
+                    <span className="ecards-btn-text">Register Now</span>
+                    <span className="ecards-btn-icon">→</span>
+                  </button>
+                </a>
+
+                {event.rulesLink && (
+                  <button
+                    className="ecards-rules-btn"
+                    onClick={() => handleRulesDownload(event.rulesLink)}
+                  >
+                    <span className="ecards-btn-text">Rules</span>
+                    <span className="ecards-btn-icon">↓</span>
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         ))}

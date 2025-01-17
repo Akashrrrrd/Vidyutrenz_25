@@ -329,3 +329,113 @@
     text-align: center;
   }
 }
+/* Base styles for the button group */
+.ecards-button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Base styles for both buttons */
+.ecards-register-btn,
+.ecards-rules-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  min-width: 140px;
+  justify-content: center;
+}
+
+/* Specific styles for register button */
+.ecards-register-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.ecards-register-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Specific styles for rules button */
+.ecards-rules-btn {
+  background-color: #4a5568;
+  color: white;
+}
+
+.ecards-rules-btn:hover {
+  background-color: #2d3748;
+  transform: translateY(-2px);
+}
+
+/* Button icons */
+.ecards-btn-icon {
+  font-size: 1.125rem;
+  transition: transform 0.2s ease;
+}
+
+.ecards-register-btn:hover .ecards-btn-icon {
+  transform: translateX(4px);
+}
+
+.ecards-rules-btn:hover .ecards-btn-icon {
+  transform: translateY(4px);
+}
+
+/* Tablet styles */
+@media screen and (max-width: 768px) {
+  .ecards-button-group {
+    gap: 0.75rem;
+  }
+
+  .ecards-register-btn,
+  .ecards-rules-btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.95rem;
+    min-width: 130px;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  .ecards-button-group {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .ecards-register-btn,
+  .ecards-rules-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    min-width: unset;
+  }
+
+  /* Adjust icon sizes for mobile */
+  .ecards-btn-icon {
+    font-size: 1rem;
+  }
+}
+
+/* Small mobile styles */
+@media screen and (max-width: 320px) {
+  .ecards-button-group {
+    padding: 0 0.5rem;
+  }
+
+  .ecards-register-btn,
+  .ecards-rules-btn {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+  }
+}
