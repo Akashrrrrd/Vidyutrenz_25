@@ -159,11 +159,7 @@ const EventsCard = () => {
         registrationFee: "Free Entry",
         teamSize: "2 Members",
         venue: "TBD",
-<<<<<<< HEAD
         coordinators: "Hanish Britto J(9626718361)",
-=======
-        coordinators: "Hanish Britto J (9626718361)",
->>>>>>> 9bca2a8f1dae2d8b36609dfbb30d9001e46a5d27
         bgImage: nontech_1,
         registrationLink:
           "https://docs.google.com/forms/d/e/1FAIpQLSenXQLhkWxyuhfA6PtjVL1yG5WUzf0XWShMKp4VtzFQp-w1sA/viewform",
