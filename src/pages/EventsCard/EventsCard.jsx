@@ -157,7 +157,7 @@ const EventsCard = () => {
         time: "10AM - 2:30PM",
         prize: "₹1500",
         registrationFee: "Free Entry",
-        teamSize: "3 Members",
+        teamSize: "2 Members",
         venue: "TBD",
         coordinators: "Hanish Britto (9626718361)",
         bgImage: nontech_1,
