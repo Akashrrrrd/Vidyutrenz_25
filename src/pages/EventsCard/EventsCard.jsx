@@ -47,7 +47,7 @@ const EventsCard = () => {
         id: 1,
         title: "Hypothesis Hub",
         description:
-          "Challenge yourself with real-world problem-solving scenarios. Use your analytical thinking and creativity to hypothesize solutions.",
+          "Showcase your research and innovation through impactful paper presentations evaluated by experts.",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
         prize: "₹3000",
@@ -64,7 +64,7 @@ const EventsCard = () => {
         id: 2,
         title: "ElectroExpo",
         description:
-          "Explore and present innovative ideas in electronics. Showcase your circuits, gadgets, and cutting-edge prototypes.",
+          "Showcase your innovative electronics projects and bring ideas to life!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
         prize: "₹3000",
@@ -81,7 +81,7 @@ const EventsCard = () => {
         id: 3,
         title: "Circuit Wars",
         description:
-          "Compete in an exciting race to design and debug electronic circuits. A thrilling event for electronics enthusiasts!",
+          "An electrifying race to redesign circuits with speed and accuracy!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
         prize: "₹3000",
@@ -98,7 +98,7 @@ const EventsCard = () => {
         id: 4,
         title: "Debate Arena",
         description:
-          "Showcase your debating skills and battle it out on trending tech topics. Convince the judges with your logic and arguments.",
+          "Challenge your communication and critical thinking skills in a fast-paced debate, where quick thinking and impactful arguments lead to victory!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
         prize: "₹3000",
@@ -115,7 +115,7 @@ const EventsCard = () => {
         id: 5,
         title: "Brainiac",
         description:
-          "An ultimate quiz competition for tech enthusiasts. Test your knowledge in various fields of science and technology.",
+          "Test your knowledge and quick thinking in a fast-paced word-guessing challenge to claim victory!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
         prize: "₹3000",
@@ -132,7 +132,7 @@ const EventsCard = () => {
         id: 6,
         title: "CodeInPhase",
         description:
-          "Solve challenging coding problems and compete against the best minds. Optimize your solutions and climb the leaderboard!",
+          "Showcase your coding and debugging skills to solve problems and demonstrate your expertise!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
         prize: "₹3000",
