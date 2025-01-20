@@ -159,7 +159,7 @@ const EventsCard = () => {
         registrationFee: "Free Entry",
         teamSize: "2 Members",
         venue: "TBD",
-        coordinators: "Hanish Britto (9626718361)",
+        coordinators: "Hanish Britto J(9626718361)",
         bgImage: nontech_1,
         registrationLink:
           "https://docs.google.com/forms/d/e/1FAIpQLSenXQLhkWxyuhfA6PtjVL1yG5WUzf0XWShMKp4VtzFQp-w1sA/viewform",
@@ -169,7 +169,7 @@ const EventsCard = () => {
         id: 2,
         title: "Music Galatta",
         description:
-          "Sing, dance, or jam with your friends. A musical extravaganza to let your talents shine!",
+          "A three-round ultimate music quiz challenge testing teams on song identification through visuals, lyrics, and silent acting.",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
         prize: "₹1500",
@@ -203,7 +203,7 @@ const EventsCard = () => {
         id: 4,
         title: "Otaku Unleashed",
         description:
-          "Celebrate anime culture with cosplay, trivia, and exciting games. A paradise for all anime enthusiasts!",
+          " Test your anime expertise across thrilling quiz rounds to claim the ultimate otaku title!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
         prize: "₹1500",
@@ -220,7 +220,7 @@ const EventsCard = () => {
         id: 5,
         title: "Genius Mindz",
         description:
-          "Put your brain to the test with puzzles, riddles, and brain teasers. An event for the sharpest minds.",
+          "A three-round challenge of memory, riddles, and problem-solving to unlock the genius within and claim victory!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
         prize: "₹1500",
