@@ -193,7 +193,7 @@ const EventsCard = () => {
         registrationFee: "Free Entry",
         teamSize: "4 Members",
         venue: "TBD",
-        coordinators: "Jai Vasanth (9363573308), Vamsi Kumar (8122750426)",
+        coordinators: "Jai Vasanth (9363573308), Vamsi Kumar (9059948642)",
         bgImage: nontech_3,
         registrationLink:
           "https://docs.google.com/forms/d/e/1FAIpQLScJdcXUNDWCAyhOv56tZ6fkxhkItQYjai-7LQp9tcQIUCkwgw/viewform",
