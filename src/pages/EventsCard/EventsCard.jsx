@@ -50,7 +50,8 @@ const EventsCard = () => {
           "Showcase your research and innovation through impactful paper presentations evaluated by experts.",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹3000",
+        prize_1: "₹2000",
+        prize_2: "₹1000",
         registrationFee: "Free Entry",
         teamSize: "2 Members",
         venue: "TBD",
@@ -67,7 +68,8 @@ const EventsCard = () => {
           "Showcase your innovative electronics projects and bring ideas to life!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹3000",
+        prize_1: "₹2000",
+        prize_2: "₹1000",
         registrationFee: "Free Entry",
         teamSize: "3 Members",
         venue: "TBD",
@@ -84,7 +86,8 @@ const EventsCard = () => {
           "An electrifying race to redesign circuits with speed and accuracy!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹3000",
+        prize_1: "₹2000",
+        prize_2: "₹1000",
         registrationFee: "Free Entry",
         teamSize: "2 Members",
         venue: "TBD",
@@ -101,7 +104,8 @@ const EventsCard = () => {
           "Challenge your communication and critical thinking skills in a fast-paced debate, where quick thinking and impactful arguments lead to victory!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹3000",
+        prize_1: "₹2000",
+        prize_2: "₹1000",
         registrationFee: "Free Entry",
         teamSize: "Individual",
         venue: "TBD",
@@ -118,7 +122,8 @@ const EventsCard = () => {
           "Test your knowledge and quick thinking in a fast-paced word-guessing challenge to claim victory!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹3000",
+        prize_1: "₹2000",
+        prize_2: "₹1000",
         registrationFee: "Free Entry",
         teamSize: "3 Members",
         venue: "TBD",
@@ -132,10 +137,11 @@ const EventsCard = () => {
         id: 6,
         title: "CodeInPhase",
         description:
-          "Showcase your coding and debugging skills to solve problems and demonstrate your expertise!",
+          "Showcase your coding and debugging skills to solve problems and demonstrate your expertise!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹3000",
+        prize_1: "₹2000",
+        prize_2: "₹1000",
         registrationFee: "Free Entry",
         teamSize: "2 Members",
         venue: "TBD",
@@ -155,7 +161,8 @@ const EventsCard = () => {
           "Guess movies, answer trivia, and showcase your movie knowledge in this fun and interactive event.",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹1500",
+        prize_1: "₹1000",
+        prize_2: "₹500",
         registrationFee: "Free Entry",
         teamSize: "2 Members",
         venue: "TBD",
@@ -172,7 +179,8 @@ const EventsCard = () => {
           "A three-round ultimate music quiz challenge testing teams on song identification through visuals, lyrics, and silent acting.",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹1500",
+        prize_1: "₹1000",
+        prize_2: "₹500",
         registrationFee: "Free Entry",
         teamSize: "Group",
         venue: "TBD",
@@ -189,7 +197,8 @@ const EventsCard = () => {
           "Gear up for an intense gaming showdown. Compete in the popular battle royale game and dominate the battlefield!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹3000",
+        prize: "1st - ₹3000",
+        
         registrationFee: "Free Entry",
         teamSize: "4 Members",
         venue: "TBD",
@@ -206,7 +215,8 @@ const EventsCard = () => {
           " Test your anime expertise across thrilling quiz rounds to claim the ultimate otaku title!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹1500",
+        prize_1: "₹1000",
+        prize_2: "₹500",
         registrationFee: "Free Entry",
         teamSize: "Individual",
         venue: "TBD",
@@ -220,10 +230,11 @@ const EventsCard = () => {
         id: 5,
         title: "Genius Mindz",
         description:
-          "A three-round challenge of memory, riddles, and problem-solving to unlock the genius within and claim victory!",
+          "A three-round challenge of memory, riddles, and problem-solving to unlock the genius within and claim victory!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹1500",
+        prize_1: "₹1000",
+        prize_2: "₹500",
         registrationFee: "Free Entry",
         teamSize: "2 Members",
         venue: "TBD",
@@ -240,7 +251,8 @@ const EventsCard = () => {
           "Experience the thrill of managing a cricket team in a mock IPL auction. Build the perfect squad and compete for glory!",
         date: "2025-02-04",
         time: "10AM - 2:30PM",
-        prize: "₹1500",
+        prize_1: "₹1000",
+        prize_2: "₹500",
         registrationFee: "Free Entry",
         teamSize: "4 Members",
         venue: "TBD",
@@ -375,7 +387,18 @@ const EventsCard = () => {
             <div className="ecards-content-wrapper">
               <div className="ecards-header-section">
                 <h2 className="ecards-event-title">{event.title}</h2>
-                <span className="ecards-prize-badge">Prize: {event.prize}</span>
+                <span className="ecards-prize-badge">
+                  {event.prize_1 && event.prize_2 ? (
+                    <>
+                      1st - {event.prize_1}{" "}
+                      <span className="ecards-prize-badge">
+                        2nd - {event.prize_2}
+                      </span>
+                    </>
+                  ) : (
+                    <span>{event.prize}</span>
+                  )}
+                </span>
               </div>
 
               <p className="ecards-description">{event.description}</p>
