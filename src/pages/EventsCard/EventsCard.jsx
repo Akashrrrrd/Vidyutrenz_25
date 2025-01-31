@@ -19,6 +19,7 @@ import work_2 from "./../../assets/work_2.png";
 import work_3 from "./../../assets/work_3.png";
 import work_4 from "./../../assets/work_4.png";
 import work_5 from "./../../assets/work_5.png";
+import work_6 from "./../../assets/work_6.png";
 import NonTech_1 from "./../../assets/NonTech_1.pdf";
 import NonTech_2 from "./../../assets/NonTech_2.pdf";
 import NonTech_3 from "./../../assets/NonTech_3.pdf";
@@ -36,6 +37,7 @@ import Work_2 from "./../../assets/Work_2.pdf";
 import Work_3 from "./../../assets/Work_3.pdf";
 import Work_4 from "./../../assets/Work_4.pdf";
 import Work_5 from "./../../assets/Work_5.pdf";
+import Work_6 from "./../../assets/Work_6.pdf";
 
 const EventsCard = () => {
   const { eventType } = useParams();
@@ -198,7 +200,7 @@ const EventsCard = () => {
         date: "2025-02-04",
         time: "10AM - 2:30PM",
         prize: "1st - ₹3000",
-        
+
         registrationFee: "Free Entry",
         teamSize: "4 Members",
         venue: "TBD",
@@ -349,6 +351,23 @@ const EventsCard = () => {
         registrationLink:
           "https://docs.google.com/forms/d/e/1FAIpQLSdiu7kAqOWTaHwKbEG1UgIA-ObI91xf-YnhhAQwdpo61_v2zQ/viewform",
         rulesLink: Work_5,
+      },
+      {
+        id: 6,
+        title: "Darkweb Mastery",
+        description:
+          "Unveil the secrets of the dark web, explore its workings, and learn secure navigation techniques.",
+        date: "2025-02-04",
+        time: "10AM - 2:30PM",
+        prize: "Certification",
+        registrationFee: "₹150",
+        teamSize: "Individual",
+        venue: "TBD",
+        coordinators: "Sitharshan M (8438190166), Akshaya (9092323633)",
+        bgImage: work_6,
+        registrationLink:
+          "https://docs.google.com/forms/d/1tNIrPy621yvQOr5ngfn636IcIa0xtMbdbNRiptfaHN0/viewform?edit_requested=true/",
+        rulesLink: Work_6,
       },
     ],
   };
